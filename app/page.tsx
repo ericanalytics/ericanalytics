@@ -134,7 +134,7 @@ export default function Home() {
 <div className="section3 text-white">
   <div className="container">
     <div className="upr_cnt12 max_widt1 text-center">
-      <h2>Let's Unlock the Power of Your Data</h2>
+      <h2>Let&apos;s Unlock the Power of Your Data</h2>
       <p>
         Are you ready to transform your website data into a powerful asset that drives business growth? As a dedicated digital data analytics expert, I&apos;m here to help you unlock the full potential of your data.
       </p>
@@ -177,7 +177,7 @@ export default function Home() {
           <div className="timeline-point"></div>
           <h3>Make Data-Driven Decisions with Confidence</h3>
           <p>
-            I never operate on a hunch. My data-driven approach empowers me to make strategic decisions based on real user behavior and insights, not guesswork. As a <span className="spn_1">Web Analytics Expert</span>, I offer comprehensive services that provide a clear understanding of your audience’s actions.
+            I never operate on a hunch. My data-driven approach empowers me to make strategic decisions based on real user behavior and insights, not guesswork. As a <span className="spn_1">Web Analytics Expert</span>, I offer comprehensive services that provide a clear understanding of your audience&apos;s actions.
           </p>
         </div>
       </div>
@@ -223,11 +223,11 @@ export default function Home() {
         <img className="inlineimg1" src="/images/inline.png" alt="Description of image" />
       </p>
       <p>
-        As your dedicated Success Partner, I integrate expertise and innovation to provide actionable insights that drive your business forward. Whether you're looking to improve website performance, enhance marketing strategies, or refine customer engagement, I am committed to your success.
+        As your dedicated Success Partner, I integrate expertise and innovation to provide actionable insights that drive your business forward. Whether you&apos;re looking to improve website performance, enhance marketing strategies, or refine customer engagement, I am committed to your success.
       </p>
 
       <p>
-        Whether you're seeking to optimize performance, refine your digital strategy, or enhance customer engagement, explore my comprehensive range of <span className="spn_1">Data Analytics Services</span> to optimize performance, refine your digital strategy, and elevate customer engagement. Contact me today to schedule a consultation and discover how I can help maximize your online potential with personalized <br /><span className="spn_1">Data Analytics Consulting.</span>
+        Whether you&apos;re seeking to optimize performance, refine your digital strategy, or enhance customer engagement, explore my comprehensive range of <span className="spn_1">Data Analytics Services</span> to optimize performance, refine your digital strategy, and elevate customer engagement. Contact me today to schedule a consultation and discover how I can help maximize your online potential with personalized <br /><span className="spn_1">Data Analytics Consulting.</span>
       </p>
 
       <p className='sub-p'>Let&apos;s connect to help your business thrive.</p>
@@ -259,7 +259,7 @@ export default function Home() {
       Advanced Web & Data Analytics Services
     </h2>
     <p>
-      I specialize in setting up and configuring essential digital analytics tools to optimize your online presence. Enhancing your website’s performance requires the right digital analytics services and expertise. Here’s how I can help you achieve this with my digital marketing services:
+      I specialize in setting up and configuring essential digital analytics tools to optimize your online presence. Enhancing your website&apos;s performance requires the right digital analytics services and expertise. Here&apos;s how I can help you achieve this with my digital marketing services:
     </p>
   </div>
 
@@ -455,7 +455,7 @@ export default function Home() {
                 <div className="review-author">John Carter</div>
                 <div className="review-role">COO, Web Innovations</div>
                 <p className="review-content">
-                  Eric's dedication to his work is outstanding. His detailed understanding of Google Analytics and ad strategies helped our business achieve significant growth.
+                  Eric&apos;s dedication to his work is outstanding. His detailed understanding of Google Analytics and ad strategies helped our business achieve significant growth.
                 </p>
                 <div className="rating-stars">★★★★★</div>
               </div>

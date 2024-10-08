@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css';
+import Script from 'next/script'; // Import the Script component from Next.js
 
 const images = [
   '/images/R44 Performance 3.png',
@@ -17,22 +18,21 @@ const images = [
   '/images/Vital-3.png',
 ];
 
-
-
 export default function Home() {
   useEffect(() => {
-    // Dynamically import Bootstrap JS
+    // Dynamically import Bootstrap JS after the component mounts
     import('bootstrap/dist/js/bootstrap.bundle.min.js');
-  }, []); // Empty dependency array to run once on mount
+  }, []); // This effect runs only once when the component mounts
 
   return (
     <>
-      {/* Bootstrap JS and dependencies */}
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+      {/* Using Next.js Script component for loading external scripts */}
+      <Script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" strategy="lazyOnload" />
+      <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" strategy="lazyOnload" />
       <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
     <div>
       {/* Navigation Section */}
       <nav className="navbar navbar-expand-lg navbar-custom">
@@ -78,7 +78,7 @@ export default function Home() {
             <div className="col-12 col-md-6">
               <h1 className="custom-heading text-white">Achieve Digital Excellence with Data Analytics Exploration</h1>
               <p className="content text-white">
-                Maximize your website's performance with Data Analytics Consulting services. As an expert in <span className="spn_1">Digital Marketing Analytics</span>, Web Analytics, and Google Data Analytics, I offer tailored solutions and actionable insights to help you achieve your digital marketing goals.
+                Maximize your website&apos;s performance with Data Analytics Consulting services. As an expert in <span className="spn_1">Digital Marketing Analytics</span>, Web Analytics, and Google Data Analytics, I offer tailored solutions and actionable insights to help you achieve your digital marketing goals.
               </p>
               <div className="cta-buttons">
                 <a href="#" className="btn btn-light me-2">Browse My Work</a>
@@ -133,7 +133,7 @@ export default function Home() {
           <div className="upr_cnt12 max_widt1 text-center">
             <h2>Let's Unlock the Power of Your Data</h2>
             <p>
-              Are you ready to transform your website data into a powerful asset that drives business growth? As a dedicated digital data analytics expert, I’m here to help you unlock the full potential of your data.
+              Are you ready to transform your website data into a powerful asset that drives business growth? As a dedicated digital data analytics expert, I&apos;m here to help you unlock the full potential of your data.
             </p>
           </div>
           <div className="row align-items-center">
@@ -150,7 +150,7 @@ export default function Home() {
                 <div className="timeline-point"></div>
                 <h3>Gain a Competitive Advantage</h3>
                 <p>
-                  Leverage data insights to keep you ahead of the curve with the <span className="spn_1">Digital Marketing Analytics</span> solutions. <span className="spn_1">Data Analytics Services</span> enable you to understand user behavior trends in your industry, empowering you to make informed decisions that differentiate you from competitors. With my expertise as a <span className="spn_1">Web Analytics Expert</span>, you can harness data's power to drive growth and foster innovation.
+                  Leverage data insights to keep you ahead of the curve with the <span className="spn_1">Digital Marketing Analytics</span> solutions. <span className="spn_1">Data Analytics Services</span> enable you to understand user behavior trends in your industry, empowering you to make informed decisions that differentiate you from competitors. With my expertise as a <span className="spn_1">Web Analytics Expert</span>, you can harness data&apos;s power to drive growth and foster innovation.
                 </p>
               </div>
 
@@ -214,7 +214,7 @@ export default function Home() {
 
           {/* Content Section */}
           <div className="col-lg-6">
-            <h3 className="highlight">Hi, I'm Eric Case</h3>
+            <h3 className="highlight">Hi, I&apos;m Eric Case</h3>
             <p className="gag_1">
               Specializing in Google Analytics and Google Ads
               <img className="inlineimg1" src="/images/inline.png" alt="Description of image" />
@@ -227,7 +227,7 @@ export default function Home() {
               Whether you're seeking to optimize performance, refine your digital strategy, or enhance customer engagement, explore my comprehensive range of <span className="spn_1">Data Analytics Services</span> to optimize performance, refine your digital strategy, and elevate customer engagement. Contact me today to schedule a consultation and discover how I can help maximize your online potential with personalized <br></br><span className="spn_1">Data Analytics Consulting.</span>
             </p>
 
-            <p className='sub-p'>Let's connect to help your business thrive.</p>
+            <p className='sub-p'>Let&apos;s connect to help your business thrive.</p>
 
             {/* Stats */}
             <div className="d-flex justify-content-between mt-4">
@@ -294,7 +294,7 @@ export default function Home() {
               </div>
               <div className="number-box">03</div>
               <h3>Google Search Console Optimization</h3>
-              <p>Connecting Google Search Console enables you to monitor and optimize your website's search performance. I utilize search analytics data to improve keyword targeting, click-through rates, and overall SEO strategy.</p>
+              <p>Connecting Google Search Console enables you to monitor and optimize your website&apos;s search performance. I utilize search analytics data to improve keyword targeting, click-through rates, and overall SEO strategy.</p>
             </div>
           </div>
         </div>
@@ -346,7 +346,7 @@ export default function Home() {
 <div className='laptop-sec' style={{position: 'relative'}}>
 <div className="upr_cnt12 max_widt1 text-center text-white">
   <h2>Web & Data Analytics Project Showcase</h2>
-  <p>Explore my web and data analytics project showcase! As a data analytics specialist, I am excited to present some of my most impactful projects, demonstrating my expertise in  <span class="spn_1">digital marketing analytics</span> and I have consistently delivered data-driven solutions that empower clients to achieve remarkable success.</p>
+  <p>Explore my web and data analytics project showcase! As a data analytics specialist, I am excited to present some of my most impactful projects, demonstrating my expertise in  <span className="spn_1">digital marketing analytics</span> and I have consistently delivered data-driven solutions that empower clients to achieve remarkable success.</p>
   </div>
 <button
         className="carousel-control-prev"
@@ -484,7 +484,7 @@ export default function Home() {
                 <input type="text" className="form-control" placeholder="Subject" />
               </div>
               <div className="mb-3">
-                <textarea className="form-control" rows="5" placeholder="Message"></textarea>
+                <textarea className="form-control" placeholder="Message"></textarea>
               </div>
               <button type="submit" className="btn btn-block snd_msg1">Send Message</button>
             </form>

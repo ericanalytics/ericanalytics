@@ -3,7 +3,7 @@ import Script from 'next/script';
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import './globals.css'; // Your custom styles
+import './/globals.css'; // Your custom styles
 
 const images = [
   { src: '/images/R44 Performance 3.png', width: 800, height: 600 },

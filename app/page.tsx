@@ -2,7 +2,8 @@
 import Script from 'next/script';
 import React, { useEffect } from 'react';
 import Image from 'next/image';
-import './/globals.css'; 
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import './/style.css'; 
 
 const images = [
   { src: '/images/R44 Performance 3.png', width: 800, height: 600 },

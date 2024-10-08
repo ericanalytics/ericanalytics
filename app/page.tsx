@@ -35,7 +35,7 @@ export default function Home() {
       <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
 
-    <div style={{ background: '#000'}}>
+    <div>
   {/* Navigation Section */}
   <nav className="navbar navbar-expand-lg navbar-custom">
     <div className="container justify-content-between">

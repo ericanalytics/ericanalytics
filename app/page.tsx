@@ -35,7 +35,7 @@ export default function Home() {
       <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
 
-    <div>
+    <div style={{ background: '#000'}}>
   {/* Navigation Section */}
   <nav className="navbar navbar-expand-lg navbar-custom">
     <div className="container justify-content-between">
@@ -141,7 +141,7 @@ export default function Home() {
     <div className="row align-items-center">
       {/* Left side: Image or icon structure */}
       <div className="col-md-6 ds_img1">
-        <Image  src="/images/ds.png" className="dsimg" alt="Data visualization image" width={200} height={100}/>
+        <Image  src="/images/ds.png" className="dsimg" alt="Data visualization image" width={371} height={636}/>
       </div>
 
       {/* Right side: Text content with timeline and line */}

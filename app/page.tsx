@@ -103,28 +103,28 @@ export default function Home() {
   <div className="container">
     <div className="row">
       <div className="col">
-        <img src="/images/wix-logo.png" className="img-fluid" alt="Wix" />
+        <Image  src="/images/wix-logo.png" className="img-fluid" alt="Wix" />
       </div>
       <div className="col">
-        <img src="/images/google-logo.png" className="img-fluid" alt="Google" />
+        <Image  src="/images/google-logo.png" className="img-fluid" alt="Google" />
       </div>
       <div className="col">
-        <img src="/images/microsoft-logo.png" className="img-fluid" alt="Microsoft" />
+        <Image  src="/images/microsoft-logo.png" className="img-fluid" alt="Microsoft" />
       </div>
       <div className="col">
-        <img src="/images/meta-logo.png" className="img-fluid" alt="Meta" />
+        <Image  src="/images/meta-logo.png" className="img-fluid" alt="Meta" />
       </div>
       <div className="col">
-        <img src="/images/shopify-logo.png" className="img-fluid" alt="Shopify" />
+        <Image  src="/images/shopify-logo.png" className="img-fluid" alt="Shopify" />
       </div>
       <div className="col">
-        <img src="/images/magento-logo.png" className="img-fluid" alt="Magento" />
+        <Image  src="/images/magento-logo.png" className="img-fluid" alt="Magento" />
       </div>
       <div className="col">
-        <img src="/images/wordpress-logo.png" className="img-fluid" alt="WordPress" />
+        <Image  src="/images/wordpress-logo.png" className="img-fluid" alt="WordPress" />
       </div>
       <div className="col">
-        <img src="/images/unbounce-logo.png" className="img-fluid" alt="Unbounce" />
+        <Image  src="/images/unbounce-logo.png" className="img-fluid" alt="Unbounce" />
       </div>
     </div>
   </div>
@@ -142,7 +142,7 @@ export default function Home() {
     <div className="row align-items-center">
       {/* Left side: Image or icon structure */}
       <div className="col-md-6 ds_img1">
-        <img src="/images/ds.png" className="dsimg" alt="Data visualization image" />
+        <Image  src="/images/ds.png" className="dsimg" alt="Data visualization image" />
       </div>
 
       {/* Right side: Text content with timeline and line */}
@@ -196,7 +196,7 @@ export default function Home() {
     <div className="col-lg-6 mb-4 youtube-video">
       <div style={{ position: 'relative', width: '560px', height: '315px' }}>
         <a href="https://www.youtube.com/watch?v=5cJOeSlWZ7Y" target="_blank" rel="noopener noreferrer">
-          <img
+          <Image 
             src="/images/YouTube.png"
             style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}
             alt="YouTube Thumbnail"
@@ -220,7 +220,7 @@ export default function Home() {
       <h3 className="highlight">Hi, I&apos;m Eric Case</h3>
       <p className="gag_1">
         Specializing in Google Analytics and Google Ads
-        <img className="inlineimg1" src="/images/inline.png" alt="Description of image" />
+        <Image  className="inlineimg1" src="/images/inline.png" alt="Description of image" />
       </p>
       <p>
         As your dedicated Success Partner, I integrate expertise and innovation to provide actionable insights that drive your business forward. Whether you&apos;re looking to improve website performance, enhance marketing strategies, or refine customer engagement, I am committed to your success.
@@ -268,7 +268,7 @@ export default function Home() {
     <div className="col-md-4 mb-4">
       <div className="service-card">
         <div className="icon-box">
-          <img src="/images/one.png" alt="Google Analytics Setup" className="service-logo" />
+          <Image  src="/images/one.png" alt="Google Analytics Setup" className="service-logo" />
         </div>
         <div className="number-box">01</div>
         <h3>Google Analytics Setup & Configuration</h3>
@@ -280,7 +280,7 @@ export default function Home() {
     <div className="col-md-4 mb-4">
       <div className="service-card">
         <div className="icon-box">
-          <img src="/images/two.png" alt="Google Tag Manager Integration" className="service-logo" />
+          <Image  src="/images/two.png" alt="Google Tag Manager Integration" className="service-logo" />
         </div>
         <div className="number-box">02</div>
         <h3>Google Tag Manager Integration</h3>
@@ -292,7 +292,7 @@ export default function Home() {
     <div className="col-md-4 mb-4">
       <div className="service-card">
         <div className="icon-box">
-          <img src="/images/three.png" alt="Google Search Console Optimization" className="service-logo" />
+          <Image  src="/images/three.png" alt="Google Search Console Optimization" className="service-logo" />
         </div>
         <div className="number-box">03</div>
         <h3>Google Search Console Optimization</h3>
@@ -306,7 +306,7 @@ export default function Home() {
     <div className="col-md-4 mb-4">
       <div className="service-card">
         <div className="icon-box">
-          <img src="/images/four.png" alt="Looker Studio Implementation" className="service-logo" />
+          <Image  src="/images/four.png" alt="Looker Studio Implementation" className="service-logo" />
         </div>
         <div className="number-box">04</div>
         <h3>Looker Studio Implementation Services</h3>
@@ -318,7 +318,7 @@ export default function Home() {
     <div className="col-md-4 mb-4">
       <div className="service-card">
         <div className="icon-box">
-          <img src="/images/five.png" alt="Google Ads Optimization" className="service-logo" />
+          <Image  src="/images/five.png" alt="Google Ads Optimization" className="service-logo" />
         </div>
         <div className="number-box">05</div>
         <h3>Google Ads Optimization Services</h3>
@@ -330,7 +330,7 @@ export default function Home() {
     <div className="col-md-4 mb-4">
       <div className="service-card">
         <div className="icon-box">
-          <img src="/images/six.png" alt="Conversion Optimization Services" className="service-logo" />
+          <Image  src="/images/six.png" alt="Conversion Optimization Services" className="service-logo" />
         </div>
         <div className="number-box">06</div>
         <h3>Conversion Optimization Services</h3>
@@ -343,7 +343,7 @@ export default function Home() {
 {/* Project Showcase */}
 <div className='img-bg-clr'>
   <div className="bg-color">
-    <img src="/images/Frame.png" alt="Background" />
+    <Image  src="/images/Frame.png" alt="Background" />
   </div>
   <div className='laptop-sec' style={{ position: 'relative' }}>
     <div className="upr_cnt12 max_widt1 text-center text-white">
@@ -394,7 +394,7 @@ export default function Home() {
           <div className="carousel-inner">
             {images.map((src, index) => (
               <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
-                <img src={src} className="d-block w-100" alt={`Slide ${index + 1}`} style={{ width: '100%', height: 'auto' }} />
+                <Image src={src} className="d-block w-100" alt={`Slide ${index + 1}`} style={{ width: '100%', height: 'auto' }} />
               </div>
             ))}
           </div>
@@ -474,7 +474,7 @@ export default function Home() {
                 For Web Analytics and Google Analytics services to make data-driven decisions that enhance your business growth.
               </p>
             </div>
-            <img className="objct" src="/images/object.png" alt="Object" />
+            <Image  className="objct" src="/images/object.png" alt="Object" />
           </div>
 
           <div className="col-md-7">
@@ -505,7 +505,7 @@ export default function Home() {
           {/* Footer Logo */}
           <div className="footer-logo">
             <a className="navbar-brand1" href="#">
-              <img className="logo" src="/images/log.png" alt="Logo" />
+              <Image  className="logo" src="/images/log.png" alt="Logo" />
             </a>
           </div>
 
@@ -520,21 +520,21 @@ export default function Home() {
 
           {/* Footer Email */}
           <div className="footer-email">
-            <img src="/images/mail.png" alt="Mail Icon" />
+            <Image  src="/images/mail.png" alt="Mail Icon" />
             <a href="mailto:info@ericanalytics.net" className="text-white mail_ft1">info@ericanalytics.net</a>
           </div>
         </div>
 
         <div className="line">
-          <img src="/images/line.png" alt="Line" />
+          <Image  src="/images/line.png" alt="Line" />
         </div>
 
         {/* Social Media Icons */}
         <div className="footer-social">
-          <a href="#"><img className="scl" src="/images/fb.png" alt="Facebook" /></a>
-          <a href="#"><img className="scl" src="/images/in.png" alt="LinkedIn" /></a>
-          <a href="#"><img className="scl" src="/images/insta.png" alt="Instagram" /></a>
-          <a href="#"><img className="scl" src="/images/you.png" alt="YouTube" /></a>
+          <a href="#"><Image  className="scl" src="/images/fb.png" alt="Facebook" /></a>
+          <a href="#"><Image  className="scl" src="/images/in.png" alt="LinkedIn" /></a>
+          <a href="#"><Image  className="scl" src="/images/insta.png" alt="Instagram" /></a>
+          <a href="#"><Image  className="scl" src="/images/you.png" alt="YouTube" /></a>
         </div>
 
         {/* Copyright Section */}

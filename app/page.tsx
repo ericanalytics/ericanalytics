@@ -344,7 +344,7 @@ export default function Home() {
 {/* Project Showcase */}
 <div className='img-bg-clr'>
   <div className="bg-color">
-    <Image  src="/images/Frame.png" alt="Background" width={200} height={100}/>
+    <Image  src="/images/Frame.png" alt="Background" width={100} height={100}/>
   </div>
   <div className='laptop-sec' style={{ position: 'relative' }}>
     <div className="upr_cnt12 max_widt1 text-center text-white">

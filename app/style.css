@@ -619,7 +619,8 @@ img.inlineimg1 {
 	      margin: 40px 0px 0px;
     }
     .navbar-brand img {
-         width: 100%;
+         width: auto;
+         height:auto;
     max-width: 111px;
     }
     .navbar-nav .nav-link {
@@ -646,7 +647,8 @@ img.inlineimg1 {
     margin-left: 50px;
 }
 span.search-icon img {
-    width: 17px;
+    width: auto;
+    height:auto;
 }
 
 
@@ -656,7 +658,8 @@ span.search-icon img {
       text-align: center;
     }
     .footer-logo img {
-        width: 100%;
+        width: auto;
+        height:auto;
     max-width: 88px;
     }
     .footer-nav a {
@@ -703,7 +706,9 @@ span.search-icon img {
     width: 100%;
 }
 img.scl {
-    width: 24px;
+    max-width: 24px;
+    width:auto;
+    height:auto;
 }
 .ang_1 {
     width: 100%;
@@ -730,7 +735,9 @@ form.fom_1 {
     padding: 80px 0px;
 }
 .footer-email img {
-    width: 28px;
+  width: auto;
+  height: auto;
+  max-width: 28px;
 }
 @media (max-width: 767px) {
   p.gag_1 {

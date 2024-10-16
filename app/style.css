@@ -565,7 +565,7 @@ img.inlineimg1 {
      background: rgba(217, 217, 217, 1);
       border-radius: 10px 10px 0 0;
     }
-    .form-control, .btn {
+    .form-control, .btn.cs-btn {
          background: rgba(14, 14, 14, 0.67);
       border: 0.5px solid rgba(168, 168, 168, 1);
       color: white;

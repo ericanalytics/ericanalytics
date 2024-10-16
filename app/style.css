@@ -1,11 +1,12 @@
 body {
   background: #000;
 }
-.row{
-  margin-top: 0;       /* Remove top margin */
-    margin-right: 0;     /* Remove right margin */
-    margin-left: 0;  
+.container .row {
+  margin-top: 0 !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
 }
+
 .cta-buttons a {
   padding: 12px 24px;
 }

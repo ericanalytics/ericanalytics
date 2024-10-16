@@ -380,7 +380,7 @@ export default function Home() {
     <div className="laptopFrame">
       <div className="laptopScreen">
         <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
-          <div className="carousel-indicators cci">
+          <div className="carousel-indicators">
             {images.map((_, index) => (
               <button
                 key={index}
@@ -416,7 +416,7 @@ export default function Home() {
         </div>
         
         {/* Indicators/dots */}
-        <div className="carousel-indicators">
+        <div className="carousel-indicators cci">
           <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1" style={{ width: '10px', height: '10px' }}></button>
           <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1" aria-label="Slide 2" style={{ width: '10px', height: '10px' }}></button>
         </div>

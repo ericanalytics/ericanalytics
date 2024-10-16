@@ -5,6 +5,9 @@ body {
 .cta-buttons a {
   padding: 12px 24px;
 }
+:root {
+  --bs-btn-bg: #fff; /* Replace with your desired color */
+}
 p.sub-p {
   margin-top: 20px;
   font-size: 18px;

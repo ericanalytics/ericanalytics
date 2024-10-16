@@ -63,7 +63,7 @@ section.sec_2, .sec_4 {
     }
 
     /* Optional styling for carousel indicators */
-    .carousel-indicators.cci {
+    .carousel-indicators {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -472,7 +472,7 @@ img.inlineimg1 {
     .carousel-item {
             padding: 30px;
         }
-        .carousel-indicators {
+        .carousel-indicators.cci {
             position: absolute;
             bottom: -30px;
             left: 50%;

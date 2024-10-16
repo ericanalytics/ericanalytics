@@ -63,7 +63,7 @@ section.sec_2, .sec_4 {
     }
 
     /* Optional styling for carousel indicators */
-    .carousel-indicators {
+    .carousel-indicators.cci {
       position: absolute;
       bottom: 0;
       left: 0;

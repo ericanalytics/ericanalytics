@@ -380,7 +380,7 @@ export default function Home() {
     <div className="laptopFrame">
       <div className="laptopScreen">
         <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
-          <div className="carousel-indicators">
+          <div className="carousel-indicators cci">
             {images.map((_, index) => (
               <button
                 key={index}

@@ -12,7 +12,8 @@ p.sub-p {
 }
 p.gag_1 img {
   max-width: 50px;
-  width: 100%;
+  width: auto;
+  height: auto;
 }
 .bg-color {
   position: absolute;
@@ -582,7 +583,8 @@ img.inlineimg1 {
       padding-bottom: 20px;
     }
 	img.objct {
-    width: 100%;
+    width: auto;
+    height:auto;
 }
 
 .upr_cnt12 h2 {

@@ -1,11 +1,6 @@
 body {
   background: #000;
 }
-.container .row {
-  margin-top: 0 !important;
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-}
 
 .cta-buttons a {
   padding: 12px 24px;
@@ -541,7 +536,7 @@ img.inlineimg1 {
 		color: rgba(255, 255, 255, 1);
 
 		}
-	 .contact-section {
+	 .contact-section.row {
      background: linear-gradient(180deg, #1C1C1C 0%, rgba(13, 13, 13, 0.95) 100%);
       border-radius: 10px;
       padding: 100px 0px;

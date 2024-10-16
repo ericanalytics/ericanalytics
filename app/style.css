@@ -705,7 +705,8 @@ span.search-icon img {
       flex-wrap: wrap;
     }
 	.line img {
-    width: 100%;
+    width: auto;
+    height: auto;
 }
 img.scl {
     max-width: 24px;

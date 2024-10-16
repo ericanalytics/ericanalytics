@@ -417,8 +417,8 @@ export default function Home() {
         
         {/* Indicators/dots */}
         <div className="carousel-indicators">
-          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1" style={{ width: '10px', height: '10px' }}></button>
+          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1" aria-label="Slide 2" style={{ width: '10px', height: '10px' }}></button>
         </div>
 
         {/* The slideshow/carousel */}

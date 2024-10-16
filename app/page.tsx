@@ -15,7 +15,7 @@ const images = [
   { src: '/images/Vital.jpg', width: 800, height: 600 },
   { src: '/images/Vital-2.png', width: 800, height: 600 },
   { src: '/images/Vital-3.png', width: 800, height: 600 },
-  { src: '/images/YouTube.png', width:800, height: 600 },
+  { src: '/images/Youtube.png', width:800, height: 600 },
 ];
 
 export default function Home() {
@@ -198,7 +198,7 @@ export default function Home() {
       <div style={{ position: 'relative', width: '560px', height: '315px' }}>
         <a href="https://www.youtube.com/watch?v=5cJOeSlWZ7Y" target="_blank" rel="noopener noreferrer">
           <Image 
-            src="/images/YouTube.png"
+            src="/images/Youtube.png"
             style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}
             width={200}
             height={100}

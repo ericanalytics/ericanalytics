@@ -478,6 +478,7 @@ img.inlineimg1 {
             left: 50%;
             transform: translateX(-50%);
             z-index: 15;
+            margin-left:0;
         }
         .carousel-indicators [data-bs-target] {
             background-color: #fff; /* White dots for indicators */

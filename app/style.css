@@ -576,7 +576,7 @@ img.inlineimg1 {
     .form-control::placeholder {
       color: #777; /* Placeholder color */
     }
-    .btn {
+    button.btn.btn-block.snd_msg1 {
       background-color: white;
       color: black;
     }

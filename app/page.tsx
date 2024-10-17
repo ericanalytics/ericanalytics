@@ -57,13 +57,13 @@ export default function Home() {
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav mb-2 mb-lg-0">
-          <li className="nav-item"><a className="nav-link text-white" href="">About</a></li>
-          <li className="nav-item"><a className="nav-link text-white" href="">Services</a></li>
-          <li className="nav-item"><a className="nav-link text-white" href="">Showcase</a></li>
+          <li className="nav-item"><a className="nav-link text-white" href="#about-sec">About</a></li>
+          <li className="nav-item"><a className="nav-link text-white" href="#services-sec">Services</a></li>
+          <li className="nav-item"><a className="nav-link text-white" href="#projects">Showcase</a></li>
         </ul>
         <ul className="navbar-nav mb-2 mb-lg-0">
-          <li className="nav-item"><a className="nav-link text-white" href="">Testimonial</a></li>
-          <li className="nav-item"><a className="nav-link text-white" href="">Contact</a></li>
+          <li className="nav-item"><a className="nav-link text-white" href="#reviewCarousel">Testimonial</a></li>
+          <li className="nav-item"><a className="nav-link text-white" href="#contact-sec">Contact</a></li>
           <li className="nav-item">
             <span className="search-icon d-none d-lg-block">
               <Image src="/images/search.png" alt="search" width={22} height={22} />
@@ -187,7 +187,7 @@ export default function Home() {
 </div>
 
 {/* Success */}
-<div className="container content-section dv-7">
+<div id="about-sec" className="container content-section dv-7">
   <div className="upr_cnt12 text-center text-white">
     <h2>Your Success Partner: Why Choosing Me Makes Sense</h2>
     <p>Trust me to optimize your online performance with precision analytics.</p>
@@ -255,7 +255,7 @@ export default function Home() {
 </div>
 
    {/* Drive Business Growth with Advanced Web & Data Analytics Services */}
-<div className="container sec_4">
+<div id="services-sec"  className="container sec_4">
   <div className="upr_cnt12 icnbx_contnt32 text-center text-white">
     <h2>
       Drive Business Growth with <br />
@@ -348,7 +348,7 @@ export default function Home() {
   <div className="bg-color">
     <Image  src="/images/Frame.png" alt="Background" width={100} height={100}/>
   </div>
-  <div className='laptop-sec' style={{ position: 'relative' }}>
+  <div id="projects" className='laptop-sec' style={{ position: 'relative' }}>
     <div className="upr_cnt12 max_widt1 text-center text-white">
       <h2>Web & Data Analytics Project Showcase</h2>
       <p>
@@ -468,7 +468,7 @@ export default function Home() {
       </div>
     </div>
       {/* Contact Section */}
-      <div className="container">
+      <div id="contact-sec" className="container">
         <div className="contact-section row">
           <div className="contact-info col-md-5">
             <div className="ang_1">

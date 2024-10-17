@@ -15,7 +15,6 @@ const images = [
   { src: '/images/Vital.jpg', width: 800, height: 600 },
   { src: '/images/Vital-2.png', width: 800, height: 600 },
   { src: '/images/Vital-3.png', width: 800, height: 600 },
-  { src: '/images/Youtube.png', width:800, height: 600 },
 ];
 
 export default function Home() {

@@ -759,6 +759,10 @@ form.fom_1 {
 .contact-section .contact-info img {
   width: 100%;
 }
+.contact-section textarea.form-control {
+  height: 100%;
+  min-height: 201px;
+}
 @media (max-width: 767px) {
   p.gag_1 {
     display: block;

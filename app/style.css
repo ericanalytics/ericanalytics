@@ -746,6 +746,9 @@ form.fom_1 {
   height: auto;
   max-width: 28px;
 }
+.navbar-custom .navbar-toggler {
+  background: #fff;
+}
 @media (max-width: 767px) {
   p.gag_1 {
     display: block;

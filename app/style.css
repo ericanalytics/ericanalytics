@@ -565,16 +565,16 @@ img.inlineimg1 {
      background: rgba(217, 217, 217, 1);
       border-radius: 10px 10px 0 0;
     }
-    .form-control, .btn.cs-btn {
+    .contact-section .form-control, .btn.cs-btn {
          background: rgba(14, 14, 14, 0.67);
       border: 0.5px solid rgba(168, 168, 168, 1);
       color: white;
 	   border-radius: 12px;
     }
-	.form-control{
+    .contact-section .form-control{
 	    line-height: 2.4;
 	}
-    .form-control::placeholder {
+  .contact-section  .form-control::placeholder {
       color: #777; /* Placeholder color */
     }
     button.btn.btn-block.snd_msg1 {
@@ -755,6 +755,9 @@ form.fom_1 {
 .img-bg-clr .bg-color img {
   width: 100%!important;
   height: 100%!important;
+}
+.contact-section .contact-info img {
+  width: 100%;
 }
 @media (max-width: 767px) {
   p.gag_1 {

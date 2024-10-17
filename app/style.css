@@ -749,12 +749,12 @@ form.fom_1 {
 .navbar-custom .navbar-toggler {
   background: #fff;
 }
-.cs-btn:hover {
+.hero .cs-btn:hover {
     background: #fff;
 }
 .img-bg-clr .bg-color img {
-  width: 100%;
-  height: 100%;
+  width: 100%!important;
+  height: 100%!important;
 }
 @media (max-width: 767px) {
   p.gag_1 {

@@ -56,7 +56,12 @@ export default function Home() {
       </button>
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav mb-2 mb-lg-0">
-          <li className="nav-item"><a className="nav-link text-white" href="#about-sec">About</a></li>
+          <li className="nav-item"><a 
+        className="nav-link text-white" 
+        onClick={() => document.getElementById("about-sec").scrollIntoView({ behavior: 'smooth' })}
+      >
+        About
+      </a></li>
           <li className="nav-item"><a className="nav-link text-white" href="#services-sec">Services</a></li>
           <li className="nav-item"><a className="nav-link text-white" href="#projects">Showcase</a></li>
         </ul>

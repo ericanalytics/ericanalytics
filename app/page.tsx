@@ -241,10 +241,10 @@ export default function Home() {
         </div>
         <div className="number-box">01</div>
         <h3>Google Analytics Setup & Configuration</h3>
-        <p>By implementing Google Analytics, I can accurately track your website traffic, user behavior, and conversions. This setup provides you with valuable insights into how visitors interact with your site, helping you make data-driven decisions.</p>
+        <p>By implementing Google Analytics, I can accurately track your website traffic, user behavior, and conversions. This setup provides you with valuable insights into how visitors interact with your site. I also configure custom reports and dashboards tailored to your business goals and KPIs, ensuring you have the information you need to make data-driven decisions.</p>
       </div>
     </div>
-
+      
     {/* Card 2 */}
     <div className="col-md-4 mb-4">
       <div className="service-card">
@@ -253,7 +253,7 @@ export default function Home() {
         </div>
         <div className="number-box">02</div>
         <h3>Google Tag Manager Integration</h3>
-        <p>Integrating Google Tag Manager streamlines your tag management process and enhances data collection across your website, allowing you to better understand user interactions and events crucial for understanding user journeys.</p>
+        <p>Integrating Google Tag Manager streamlines your tag management process and enhances data collection across your website. I set up tags, triggers, and variables to track specific user interactions and events crucial for understanding user journeys.</p>
       </div>
     </div>
 
@@ -265,7 +265,7 @@ export default function Home() {
         </div>
         <div className="number-box">03</div>
         <h3>Google Search Console Optimization</h3>
-        <p>Connecting Google Search Console enables you to monitor and optimize your website&apos;s search performance. I utilize search analytics data to improve keyword targeting, click-through rates, and overall SEO strategy.</p>
+        <p>Connecting Google Search Console enables you to monitor and optimize your website&apos;s search performance. I utilize search analytics data to improve keyword targeting, click-through rates, and overall SEO strategy. By analyzing search queries, impressions, and click data, I help you identify opportunities for growth and ensure your site meets Google&apos;s search standards.</p>
       </div>
     </div>
   </div>
@@ -279,7 +279,7 @@ export default function Home() {
         </div>
         <div className="number-box">04</div>
         <h3>Looker Studio Implementation Services</h3>
-        <p>Implementing Looker Studio allows you to visualize and analyze data from Google Analytics and other sources effectively. I customize reports and dashboards to help you understand complex data sets and identify trends.</p>
+        <p>Implementing Looker Studio allows you to visualize and analyze data from Google Analytics and other sources effectively. I customize reports and dashboards in Looker Studio to gain actionable insights into your website&apos;s performance and user engagement. This visualization tool helps you understand complex data sets, making it easier to identify trends and areas for improvement.</p>
       </div>
     </div>
 
@@ -291,7 +291,7 @@ export default function Home() {
         </div>
         <div className="number-box">05</div>
         <h3>Google Ads Optimization Services</h3>
-        <p>Optimizing your Google Ads campaigns is crucial for maximizing your ROI. I analyze your ad performance, identify high-performing keywords, and adjust bids to ensure your ads reach the right audience and achieve high click-through rates.</p>
+        <p>Optimizing your Google Ads campaigns is crucial for maximizing your ROI. I analyze your ad performance, identify high-performing keywords, and adjust bids and budgets to ensure your ads reach the right audience. By refining your ad copy and targeting, I help you achieve higher click-through rates and conversions.</p>
       </div>
     </div>
 
@@ -303,7 +303,7 @@ export default function Home() {
         </div>
         <div className="number-box">06</div>
         <h3>Conversion Optimization Services</h3>
-        <p>Conversion optimization services help you convert more visitors into leads and customers. I use data-driven techniques to enhance user experience and increase the performance of your website.</p>
+        <p>Connecting Google Search Console enables you to monitor and optimize your website&apos;s search performance. I utilize search analytics data to improve keyword targeting, click-through rates, and overall SEO strategy. By analyzing search queries, impressions, and click data, I help you identify opportunities for growth and ensure your site meets Google&apos;s search standards.</p>
       </div>
     </div>
   </div>

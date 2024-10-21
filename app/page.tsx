@@ -1,7 +1,7 @@
 'use client';
 import Script from 'next/script';
 import React, { useEffect } from 'react';
-import Header from 'components/header.tsx';
+import Header from '../components/header'; 
 import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import './/style.css'; 

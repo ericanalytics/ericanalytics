@@ -186,72 +186,7 @@ export default function Home() {
 </div>
 
 {/* Success */}
-<div id="about-sec" className="container content-section dv-7">
-  <div className="upr_cnt12 text-center text-white">
-    <h2>Your Success Partner: Why Choosing Me Makes Sense</h2>
-    <p>Trust me to optimize your online performance with precision analytics.</p>
-  </div>
-  <div className="row align-items-center">
-    {/* YouTube Video */}
-    <div className="col-lg-6 mb-4 youtube-video">
-      <div style={{ position: 'relative', width: '560px', height: '315px' }}>
-        <a href="https://www.youtube.com/watch?v=5cJOeSlWZ7Y" target="_blank" rel="noopener noreferrer">
-          <Image 
-            src="/images/Youtube.png"
-            style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}
-            width={560}
-            height={315}
-            alt="YouTube Thumbnail"
-          />
-        </a>
-        <iframe
-          width="100%"
-          height="315"
-          src="https://www.youtube.com/embed/5cJOeSlWZ7Y"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          style={{ display: 'none' }}
-          title="YouTube Video"
-        ></iframe>
-      </div>
-    </div>
 
-    {/* Content Section */}
-    <div className="col-lg-6">
-      <h3 className="highlight">Hi, I&apos;m Eric Case</h3>
-      <p className="gag_1">
-        Specializing in Google Analytics and Google Ads
-        <Image  className="inlineimg1" src="/images/inline.png" alt="Description of image" width={200} height={100}/>
-      </p>
-      <p>
-        As your dedicated Success Partner, I integrate expertise and innovation to provide actionable insights that drive your business forward. Whether you&apos;re looking to improve website performance, enhance marketing strategies, or refine customer engagement, I am committed to your success.
-      </p>
-
-      <p>
-        Whether you&apos;re seeking to optimize performance, refine your digital strategy, or enhance customer engagement, explore my comprehensive range of <span className="spn_1">Data Analytics Services</span> to optimize performance, refine your digital strategy, and elevate customer engagement. Contact me today to schedule a consultation and discover how I can help maximize your online potential with personalized <br /><span className="spn_1">Data Analytics Consulting.</span>
-      </p>
-
-      <p className='sub-p'>Let&apos;s connect to help your business thrive.</p>
-
-      {/* Stats */}
-      <div className="d-flex justify-content-between mt-4">
-        <div className="stats">
-          Experience
-          <span className="stats-number">10+</span>
-        </div>
-        <div className="stats">
-          Projects Delivered
-          <span className="stats-number">250+</span>
-        </div>
-        <div className="stats">
-          Happy Clients
-          <span className="stats-number">90+</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
    {/* Drive Business Growth with Advanced Web & Data Analytics Services */}
 <div id="services-sec"  className="container sec_4">

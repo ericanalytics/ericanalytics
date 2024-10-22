@@ -1,3 +1,4 @@
+// components/Header.tsx
 import React from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
@@ -6,10 +7,7 @@ const Header: React.FC = () => {
     const router = useRouter();
 
     const scrollToSection = (sectionId: string) => {
-        // Change the URL without reloading the page
         router.push(`/${sectionId}`);
-        
-        // Smoothly scroll to the section
         const section = document.getElementById(sectionId);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });

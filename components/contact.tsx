@@ -26,10 +26,10 @@ const Contact: React.FC = () => {
 
     emailjs
       .send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+        "service_xxfx7l5", // Replace with your EmailJS service ID
+        "template_rinsfrh", // Replace with your EmailJS template ID
         formData,
-        "YOUR_USER_ID" // Replace with your EmailJS user ID
+        "ericanalytics10@gmail.com" // Replace with your EmailJS user ID
       )
       .then(
         (response) => {

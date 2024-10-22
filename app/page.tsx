@@ -448,39 +448,6 @@ export default function Home() {
       </div>
     </div>
       {/* Contact Section */}
-      <div id="contact" className="container">
-        <div className="contact-section row">
-          <div className="contact-info col-md-5">
-            <div className="ang_1">
-              <h3>Get In Touch</h3>
-              <p>
-                For Web Analytics and Google Analytics services to make data-driven decisions that enhance your business growth.
-              </p>
-            </div>
-            <Image  className="objct" src="/images/object.png" alt="Object" width={200} height={100}/>
-          </div>
-
-          <div className="col-md-7">
-            <form className="fom_1">
-              <div className="row">
-                <div className="col-md-6 mb-3">
-                  <input type="text" className="form-control" placeholder="Name*" required />
-                </div>
-                <div className="col-md-6 mb-3">
-                  <input type="email" className="form-control" placeholder="E-mail*" required />
-                </div>
-              </div>
-              <div className="mb-3">
-                <input type="text" className="form-control" placeholder="Subject" />
-              </div>
-              <div className="mb-3">
-                <textarea className="form-control" placeholder="Message"></textarea>
-              </div>
-              <button type="submit" className="btn btn-block snd_msg1">Send Message</button>
-            </form>
-          </div>
-        </div>
-      </div>
             <Contact />
       {/* Footer Section */}
       <Footer scrollToSection={scrollToSection} />

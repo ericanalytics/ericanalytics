@@ -29,7 +29,7 @@ const Contact: React.FC = () => {
         "service_xxfx7l5", // Replace with your EmailJS service ID
         "template_rinsfrh", // Replace with your EmailJS template ID
         formData,
-        "ericanalytics10@gmail.com" // Replace with your EmailJS user ID
+        "Pt8XQT-0aToBCEO8x" // Replace with your EmailJS user ID
       )
       .then(
         (response) => {

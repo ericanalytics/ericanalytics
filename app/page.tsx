@@ -2,6 +2,7 @@
 import Script from 'next/script';
 import React, { useEffect } from 'react';
 import Header from '../components/header'; 
+import Footer from '../components/footer'; 
 import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import './/style.css'; 
@@ -18,7 +19,19 @@ const images = [
   { src: '/images/Vital-3.png', width: 800, height: 600 },
 ];
 
-export default function Home() {
+
+
+  const Home: React.FC = () => {
+    // Scroll function to navigate to specific sections
+    const scrollToSection = (sectionId: string) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+
+
   useEffect(() => {
     // Dynamically import Bootstrap JS after the component mounts
     import('bootstrap/dist/js/bootstrap.bundle.min.js');
@@ -469,48 +482,7 @@ export default function Home() {
       </div>
 
       {/* Footer Section */}
-      <footer className="footer container">
-        <div className="footer-container">
-          {/* Footer Logo */}
-          <div className="footer-logo">
-            <a className="navbar-brand1" href="#">
-              <Image  className="logo" src="/images/log.png" alt="Logo" width={200} height={100}/>
-            </a>
-          </div>
-
-          {/* Footer Navigation */}
-          <div className="footer-nav d-flex">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Showcase</a>
-            <a href="#">Testimonial</a>
-            <a href="#">Contact</a>
-          </div>
-
-          {/* Footer Email */}
-          <div className="footer-email">
-            <Image  src="/images/mail.png" alt="Mail Icon" width={200} height={100} />
-            <a href="mailto:info@ericanalytics.net" className="text-white mail_ft1">info@ericanalytics.net</a>
-          </div>
-        </div>
-
-        <div className="line">
-          <Image  src="/images/line.png" alt="Line" width={200} height={100}/>
-        </div>
-
-        {/* Social Media Icons */}
-        <div className="footer-social">
-          <a href="#"><Image  className="scl" src="/images/fb.png" alt="Facebook" width={200} height={100}/></a>
-          <a href="#"><Image  className="scl" src="/images/in.png" alt="LinkedIn" width={200} height={100}/></a>
-          <a href="#"><Image  className="scl" src="/images/insta.png" alt="Instagram" width={200} height={100}/></a>
-          <a href="#"><Image  className="scl" src="/images/you.png" alt="YouTube" width={200} height={100}/></a>
-        </div>
-
-        {/* Copyright Section */}
-        <div className="footer-copyright">
-          Copyright © 2024. All rights reserved
-        </div>
-      </footer>
+      <Footer scrollToSection={scrollToSection} />
     </div>
     </>
   );

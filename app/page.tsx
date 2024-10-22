@@ -21,7 +21,7 @@ const images = [
 
 
 
-  const Home: React.FC = () => {
+const Home: React.FC = () => {
     // Scroll function to navigate to specific sections
     const scrollToSection = (sectionId: string) => {
         const section = document.getElementById(sectionId);

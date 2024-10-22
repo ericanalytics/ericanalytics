@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 
@@ -6,13 +6,16 @@ const Header: React.FC = () => {
     const router = useRouter();
 
     const handleNavigation = (sectionId: string, path: string) => {
-        // Change the URL without reloading the page
-        router.push(path, undefined, { shallow: true });
+        // Ensure this runs only on the client-side
+        if (typeof window !== 'undefined') {
+            // Change the URL without reloading the page
+            router.push(path, undefined, { shallow: true });
 
-        // Smoothly scroll to the section
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
+            // Smoothly scroll to the section
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     };
 

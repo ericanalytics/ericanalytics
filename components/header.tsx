@@ -30,7 +30,7 @@ const Header: React.FC = () => {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link text-white" onClick={() => scrollToSection('about')}>About</a>
+                                <a className="nav-link text-white" onClick={() => scrollToSection('about-sec')}>About</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link text-white" onClick={() => scrollToSection('services')}>Services</a>

@@ -1,7 +1,9 @@
 body {
   background: #000;
 }
-
+a.nav-link {
+  cursor: pointer;
+}
 .cta-buttons a {
   padding: 12px 24px;
 }

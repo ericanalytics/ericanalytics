@@ -19,9 +19,9 @@ const images = [
   { src: '/images/Vital-3.png', width: 800, height: 600 },
 ];
 
+export default function Home() {
 
-
-const Home: React.FC = () => {
+ 
     // Scroll function to navigate to specific sections
     const scrollToSection = (sectionId: string) => {
         const section = document.getElementById(sectionId);

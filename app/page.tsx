@@ -153,7 +153,7 @@ export default function Home() {
 </div>
 
 {/* Success */}
-<div id="about-sec" className="container content-section dv-7">
+<div id="about" className="container content-section dv-7">
   <div className="upr_cnt12 text-center text-white">
     <h2>Your Success Partner: Why Choosing Me Makes Sense</h2>
     <p>Trust me to optimize your online performance with precision analytics.</p>

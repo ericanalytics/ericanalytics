@@ -14,9 +14,14 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+// Define the canonical URL here
+const canonicalUrl = "https://ericanalyticsnet.vercel.app/";
+
 export const metadata: Metadata = {
   title: "Achieve Digital Excellence with Data Analytics Exploration",
   description: "Maximize your website's performance with Data Analytics Consulting services. As an expert in Digital Marketing Analytics, Web Analytics, and Google Data Analytics, I offer tailored solutions and actionable insights to help you achieve your digital marketing goals.",
+  // You can also include canonical here if you want
+  // canonical: canonicalUrl,
 };
 
 export default function RootLayout({
@@ -27,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <link rel="canonical" href="https://ericanalyticsnet.vercel.app/" /> {/* Add canonical tag here */}
+        <link rel="canonical" href={canonicalUrl} /> {/* Add canonical tag here */}
       </Head>
       <body
         style={{ background: '#000', fontFamily: 'Inter, sans-serif'}}

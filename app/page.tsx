@@ -3,6 +3,7 @@ import Script from 'next/script';
 import React, { useEffect } from 'react';
 import Header from '../components/header'; 
 import Footer from '../components/footer'; 
+import Contact from '../components/contact';
 import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import './/style.css'; 
@@ -480,7 +481,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-
+            <Contact />
       {/* Footer Section */}
       <Footer scrollToSection={scrollToSection} />
     </div>

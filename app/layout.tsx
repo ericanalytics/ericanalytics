@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./style.css";
+import Head from "next/head"; // Import Head from next/head
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
-}); 
+});
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -25,7 +26,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={{ background: '#000', fontFamily: 'Inter, sans-serif'}}
+      <Head>
+        <link rel="canonical" href="https://ericanalyticsnet.vercel.app/" /> {/* Add canonical tag here */}
+      </Head>
+      <body
+        style={{ background: '#000', fontFamily: 'Inter, sans-serif'}}
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}

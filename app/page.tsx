@@ -221,7 +221,7 @@ export default function Home() {
 </div>
 
    {/* Drive Business Growth with Advanced Web & Data Analytics Services */}
-<div id="services-sec"  className="container sec_4">
+<div id="services"  className="container sec_4">
   <div className="upr_cnt12 icnbx_contnt32 text-center text-white">
     <h2>
       Drive Business Growth with <br />
@@ -434,7 +434,7 @@ export default function Home() {
       </div>
     </div>
       {/* Contact Section */}
-      <div id="contact-sec" className="container">
+      <div id="contact" className="container">
         <div className="contact-section row">
           <div className="contact-info col-md-5">
             <div className="ang_1">

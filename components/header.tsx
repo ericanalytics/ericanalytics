@@ -36,12 +36,12 @@ const Header: React.FC = () => {
                                 <a className="nav-link text-white" onClick={() => scrollToSection('services')}>Services</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-white" onClick={() => scrollToSection('showcase')}>Showcase</a>
+                                <a className="nav-link text-white" onClick={() => scrollToSection('projects')}>Showcase</a>
                             </li>
                         </ul>
                         <ul className="navbar-nav mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link text-white" onClick={() => scrollToSection('testimonial')}>Testimonial</a>
+                                <a className="nav-link text-white" onClick={() => scrollToSection('reviewCarousel')}>Testimonial</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link text-white" onClick={() => scrollToSection('contact')}>Contact</a>

@@ -249,6 +249,7 @@ export default function Home() {
   <div className="row">
     {/* Card 1 */}
     <div className="col-md-4 mb-4">
+    <div className="border-right"></div>
       <div className="service-card">
         <div className="icon-box">
           <Image  src="/images/one.png" alt="Google Analytics Setup" className="service-logo" width={200} height={100} />
@@ -273,6 +274,7 @@ export default function Home() {
 
     {/* Card 3 */}
     <div className="col-md-4 mb-4">
+    <div className="border-left"></div>
       <div className="service-card">
         <div className="icon-box">
           <Image  src="/images/three.png" alt="Google Search Console Optimization" className="service-logo" width={200} height={100} />
@@ -283,10 +285,11 @@ export default function Home() {
       </div>
     </div>
   </div>
-
+  <div className="border-bottom-cc"></div>
   <div className="row">
     {/* Card 4 */}
     <div className="col-md-4 mb-4">
+    <div className="border-right-b"></div>
       <div className="service-card">
         <div className="icon-box">
           <Image  src="/images/four.png" alt="Looker Studio Implementation" className="service-logo" width={200} height={100} />
@@ -311,6 +314,7 @@ export default function Home() {
 
     {/* Card 6 */}
     <div className="col-md-4 mb-4">
+    <div className="border-left-b"></div>
       <div className="service-card">
         <div className="icon-box">
           <Image  src="/images/six.png" alt="Conversion Optimization Services" className="service-logo" width={200} height={100} />

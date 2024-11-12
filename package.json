@@ -16,7 +16,6 @@
     "react-bootstrap": "^2.10.5",
     "react-dom": "^18",
     "react-helmet-async": "^2.0.5",
-    "react-marquee-line": "^1.0.1",
     "swiper": "^11.1.12"
   },
   "devDependencies": {

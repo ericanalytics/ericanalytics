@@ -1,5 +1,6 @@
 body {
   background: #000;
+  overflow-x: hidden;
 }
 a.nav-link {
   cursor: pointer;
@@ -50,12 +51,21 @@ p.gag_1 img {
 .carousel-indicators [data-bs-target] {
    display: block!important;
 }
-
-.carousel-control-next, .carousel-control-prev, div#reviewCarousel{
-    top: 120px;
-
+.carousel-control-next, .carousel-control-prev{
+    top: 30%;
 }
-section.sec_2, .sec_4 {
+div#reviewCarousel {
+  padding-top: 140px;
+}
+section.sec_2{
+  margin: 80px 0px 20px;
+  padding: 20px;
+  background: radial-gradient(#000000, #0D0D0D, #000000);
+}
+
+
+
+.sec_4 {
     padding: 80px 0px;
 }
     /* Carousel image styling */
@@ -88,6 +98,11 @@ section.sec_2, .sec_4 {
 display: none;
 
 }
+.fter-bg-image {
+  position: absolute;
+  margin-top: -638px;
+  right: 0;
+}
     /* Responsive Styles */
     @media (max-width: 768px) {
       .laptopFrame {
@@ -115,8 +130,7 @@ display: none;
         width: 100%;
       }
       .bg-color {
-        position: absolute;
-        top: -11%;
+        top: -11% !important;
         z-index: -1;
         right: 0;
         left: 10%;
@@ -159,10 +173,6 @@ display: none;
         height: 82%;
       }
     }
-  
-  
-  
-  
   
 	body{
 	background: #000;
@@ -261,6 +271,7 @@ p {
 .container {
   max-width: 1260px;
   width: 100%;
+  margin: auto;
 }
 @media (max-width: 768px) {
   .content-block {
@@ -294,7 +305,7 @@ img.dsimg {
   color: #fff;  
 }
 .sec_4 .col-md-4:hover{
-  background-color: #2a2a2a; 
+  background-color: #0D0D0D; 
 }
 .sec_4 .col-md-4{
   transition: all 0.3s ease;
@@ -345,12 +356,6 @@ img.dsimg {
   color: rgba(255, 255, 255, 0.3); /* Faded number by default */
   transition: color 0.3s ease;
 }
-
-.service-card:hover .number-box {
-  color: #007bff; 
-}
-
-
 .number-box {
   font-size: 3rem; /* Adjust the font size as per your design */
   color: transparent; /* Makes the fill transparent */
@@ -359,7 +364,6 @@ img.dsimg {
 }
 
 .service-card:hover .number-box {
-  color: #007bff; /* Blue fill color on hover */
   -webkit-text-stroke: 2px #007bff; /* Change stroke to blue on hover */
 }
 
@@ -548,9 +552,10 @@ img.inlineimg1 {
       border-radius: 10px;
       padding: 100px 0px;
       max-width: 1070px;
-      margin: 250px auto 40px;
+      margin: 150px auto 40px;
       color: white;
       position: relative;
+      z-index: 999;
     }
     .footer-social {
       display: flex;
@@ -576,35 +581,45 @@ img.inlineimg1 {
     .contact-section .form-control{
 	    line-height: 2.4;
 	}
-  .contact-section  .form-control::placeholder {
+.contact-section  .form-control::placeholder {
       color: #777; /* Placeholder color */
-    }
-    button.btn.btn-block.snd_msg1 {
-      background-color: white;
-      color: black;
-    }
-    .contact-info {
+  }
+  button.btn.btn-block.snd_msg1:hover {
+    background: #0000;
+    color: #fff;
+}
+  button.btn.btn-block.snd_msg1 {
+    background-color: white;
+    color: black;
+    padding: 16px 58px;
+    margin-top: 27px;
+    border-radius: 12px;
+}
+.contact-info {
       padding-right: 40px;
       padding-left: 0px;
       padding-bottom: 20px;
-    }
+}
 	img.objct {
     width: auto;
     height:auto;
 }
 
 .upr_cnt12 h2 {
- font-size: 42px;
-      font-weight: 700;
+    font-size: 42px;
+    font-weight: 700;
 	  line-height: 56px;
+}
+#projects .upr_cnt12 p { 
+   margin-bottom: 60px;
 }
 .upr_cnt12 p {
   font-size: 16px;
   font-weight: 400;
-  margin-top: 15px;
+  margin-top: 15px; 
 	line-height: 24px;
 	color: rgba(255, 255, 255, 1);
-	padding: 0px 0px 70px;
+	/* padding: 0px 0px 70px; */
 }
 .content-block h3 {
   margin-bottom: 15px;
@@ -651,9 +666,11 @@ img.inlineimg1 {
       font-size: 15px;
       cursor: pointer;
     }
-	.navbar-nav li.nav-item {
-    margin-left: 50px;
-}
+    ul.navbar-nav {
+      width: 100%;
+      max-width: 400px;
+      justify-content: space-around;
+  }
 span.search-icon img {
     width: auto;
     height:auto;
@@ -679,10 +696,14 @@ span.search-icon img {
     .footer-nav a:hover {
       text-decoration: underline;
     }
+    .footer-email a{
+      text-decoration: none;
+    }
     .footer-email {
       display: flex;
       align-items: center;
       font-size: 16px;
+      gap: 15px;
     }
     .footer-email i {
       margin-right: 8px;
@@ -711,8 +732,9 @@ span.search-icon img {
       flex-wrap: wrap;
     }
 	.line img {
-    width: auto;
+    width: 100%;
     height: auto;
+    margin-top: 15px;
 }
 img.scl {
     max-width: 24px;
@@ -768,6 +790,9 @@ form.fom_1 {
 #carouselExampleIndicators .carousel-indicators {
   display: none;
 }
+.youtube-video>div {
+  margin-right: 25px;
+}
 @media (max-width: 767px) {
   p.gag_1 {
     display: block;
@@ -796,7 +821,7 @@ form.fom_1 {
           display: none;
   }
   .content-section {
-            padding: 0px 20px;
+            padding: 40px 20px;
 }
   .upr_cnt12 p, .gag_1 {
     font-size: 16px;
@@ -952,18 +977,23 @@ background-color: revert;
   .line {
     display: none; /* Hide the divider line on mobile for simplicity */
   }
-  .contact-section{
-      padding: 20px 15px;
-      margin: 205px auto 40px;
+  .contact-section.row{
+      padding: 30px 15px 20px;
+      margin: 120px auto 40px;
   }
+  .contact-info h3 {
+    font-size: 36px;
+    line-height: 50px;
+}
   .ang_1, .contact-section .col-md-7, form.fom_1 {
     padding: 0px;
 }
-  section.sec_2, .sec_4 {
+.sec_4 {
     padding: 80px 0px;
 }
-  img.objct {
+img.objct {
     position: absolute;
+    top: 0px;
 }
 footer.footer.container {
     border-top: 1px solid;
@@ -995,10 +1025,12 @@ footer.footer.container {
         display: flex !important;
         flex-basis: auto;
         justify-content: space-between;
-        max-width: 1089px;
+        /* max-width: 1089px; */
         margin: auto;
-    }
-	
-	
-	
+    }	
+}
+@media (max-width: 1400px) {
+  .bg-color{
+    top: -40%;
+  }
 }

@@ -175,7 +175,7 @@ export default function Home() {
   <div className="row align-items-center">
     {/* YouTube Video */}
     <div className="col-lg-6 mb-4 youtube-video">
-      <div style={{ position: 'relative', width: '560px', height: '315px' }}>
+      <div style={{ position: 'relative', height: '315px', }}>
         <a href="https://www.youtube.com/watch?v=5cJOeSlWZ7Y" target="_blank" rel="noopener noreferrer">
           <Image 
             src="/images/Youtube.png"
@@ -446,10 +446,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </div>   
       {/* Contact Section */}
             <Contact />
-      {/* Footer Section */}
+     <div className="fter-bg-image">
+      <Image src="/images/texture-42.png"  width={634} height={900} className="bg-image-footer" alt="Bg footer"/>
+    </div>      
+      {/* Footer Section */}      
       <Footer scrollToSection={scrollToSection} />
     </div>
     </>

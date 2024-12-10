@@ -1,14 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const CounterSection = () => {
-  const [experience, setExperience] = useState(0);
-  const [projects, setProjects] = useState(0);
-  const [clients, setClients] = useState(0);
-  const [isVisible, setIsVisible] = useState(false); // To track if the section is in the viewport
-  const sectionRef = useRef(null); // Reference to the section
+const CounterSection: React.FC = () => {
+  // Define state variables with explicit types
+  const [experience, setExperience] = useState<number>(0);
+  const [projects, setProjects] = useState<number>(0);
+  const [clients, setClients] = useState<number>(0);
+  const [isVisible, setIsVisible] = useState<boolean>(false); // To track if the section is in the viewport
+  const sectionRef = useRef<HTMLDivElement | null>(null); // Reference to the section
 
-  // Animation function for counting up
-  const countUp = (target, setter) => {
+  // Type the countUp function parameters
+  const countUp = (target: number, setter: React.Dispatch<React.SetStateAction<number>>) => {
     let start = 0;
     const end = target;
     const duration = 2000; // 2 seconds for the animation

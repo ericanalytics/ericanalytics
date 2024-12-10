@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import YouTubeVideo from '../components/youtube_video';
+import LogosCrousel from '../components/logos-crousel';
 import Contact from '../components/contact';
 import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
@@ -66,8 +67,8 @@ export default function Home() {
             Maximize your website&apos;s performance with Data Analytics Consulting services. As an expert in <span className="spn_1">Digital Marketing Analytics</span>, Web Analytics, and Google Data Analytics, I offer tailored solutions and actionable insights to help you achieve your digital marketing goals.
           </p>
           <div className="cta-buttons">
-            <a href="#" className="btn btn-light me-2 cs-btn">Browse My Work</a>
-            <a href="#" className="btn btn-default cs-btn">Chat With Me</a>
+            <a href="#projects" className="btn btn-light me-2 cs-btn">Browse My Work</a>
+            <a href="#contact" className="btn btn-default cs-btn">Chat With Me</a>
           </div>
         </div>
         {/* Image Section */}
@@ -81,36 +82,7 @@ export default function Home() {
     </div>
   </section>
 {/* New Logo Section */}
-<section className="sec_2">
-      <div className="container">
-        <div className="row">
-          <div className="col">
-            <Image src="/images/wix-logo.png" className="img-fluid" alt="Wix" width={200} height={100} />
-          </div>
-          <div className="col">
-            <Image src="/images/google-logo.png" className="img-fluid" alt="Google" width={200} height={100} />
-          </div>
-          <div className="col">
-            <Image src="/images/microsoft-logo.png" className="img-fluid" alt="Microsoft" width={200} height={100} />
-          </div>
-          <div className="col">
-            <Image src="/images/meta-logo.png" className="img-fluid" alt="Meta" width={200} height={100} />
-          </div>
-          <div className="col">
-            <Image src="/images/shopify-logo.png" className="img-fluid" alt="Shopify" width={200} height={100} />
-          </div>
-          <div className="col">
-            <Image src="/images/magento-logo.png" className="img-fluid" alt="Magento" width={200} height={100} />
-          </div>
-          <div className="col">
-            <Image src="/images/wordpress-logo.png" className="img-fluid" alt="WordPress" width={200} height={100} />
-          </div>
-          <div className="col">
-            <Image src="/images/unbounce-logo.png" className="img-fluid" alt="Unbounce" width={200} height={100} />
-          </div>
-        </div>
-      </div>
-    </section>
+<LogosCrousel />
 
 {/* New Section 3: Data Analytics */}
 <div className="section3 text-white">
@@ -202,11 +174,11 @@ export default function Home() {
         </div>
         <div className="stats">
           Projects Delivered
-          <span className="stats-number">250+</span>
+          <span className="stats-number">350+</span>
         </div>
         <div className="stats">
           Happy Clients
-          <span className="stats-number">90+</span>
+          <span className="stats-number">300+</span>
         </div>
       </div>
     </div>

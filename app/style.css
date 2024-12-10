@@ -620,6 +620,7 @@ img.inlineimg1 {
   margin-top: 15px;
 	line-height: 24px;
 	color: rgba(255, 255, 255, 1);
+  margin-bottom: 40px;
 	/* padding: 0px 0px 70px; */
 }
 .content-block h3 {
@@ -734,7 +735,7 @@ span.search-icon img {
     }
 	.line img {
     width: 100%;
-    height: auto;
+    height: 2px;
     margin-top: 15px;
 }
 img.scl {
@@ -800,9 +801,58 @@ div#services .row .col-md-4{
 }
 .col-lg-5.review-box {
     height: 100vh;
-    max-height: 30vh;
+    max-height: 275px;
+}
+.sec_2 .col:first-child img {
+  position: relative;
+  left: 25%;
+}
+.success-message {
+  color: green;
+  padding: 10px 30px 0px;
+}
+
+/* Container for the carousel */
+.logo-carousel {
+  width: 100%;
+  overflow: hidden;
+}
+.logo-container {
+  display: flex;
+  animation: scroll-logos 20s linear infinite;
+}
+.logo-container .logo img {
+  height: 100%;
+  max-width: 141px;
+}
+.logo-carousel .logo {
+  margin-right: 30px;
+}
+.logo-carousel:hover .logo-container {
+  animation-play-state: paused;
+}
+.logo.wixlogo {
+  max-width: 102px;
+  margin-left: -20px;
+}
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 @media (max-width: 767px) {
+  section.sec_2 {
+    margin: 20px 0px 0px;
+  }
+.logo-container {
+    animation: scroll-logos 10s linear infinite;
+  }
+.sec_2 .col:first-child img {
+    left: auto;
+}
   .gag_1 {
     display: block;
 }
@@ -818,11 +868,13 @@ div#services .row .col-md-4{
     font-size: 1.1rem;
   }
   .col-lg-5.review-box {
+    height: 100vh;
     max-height: 304px;
 }
   .service-card p {
     font-size: 0.9rem;
   }
+
   .upr_cnt12 h2, .highlight {
     font-size: 28px;
     padding: 10px;
@@ -1041,12 +1093,12 @@ footer.footer.container {
 }
 @media (max-width: 1024px) {
   .timeline-line {
-    max-height: 74% !important;
+    max-height: 73% !important;
 }
 }
 @media (max-width: 1400px) {
 .timeline-line {
-  max-height: 77%;
+  max-height: 75%;
 }
 }
 /* Desktop (min-width: 992px) */

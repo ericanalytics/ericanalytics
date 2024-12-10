@@ -40,12 +40,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
             </div>
 
             {/* Social Media Icons */}
-            <div className="footer-social">
-                <a href="#"><Image className="scl" src="/images/fb.png" alt="Facebook" width={200} height={100} /></a>
-                <a href="#"><Image className="scl" src="/images/in.png" alt="LinkedIn" width={200} height={100} /></a>
-                <a href="#"><Image className="scl" src="/images/insta.png" alt="Instagram" width={200} height={100} /></a>
-                <a href="#"><Image className="scl" src="/images/you.png" alt="YouTube" width={200} height={100} /></a>
-            </div>
+
 
             {/* Copyright Section */}
             <div className="footer-copyright">

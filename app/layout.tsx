@@ -6,7 +6,7 @@ const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
-}); 
+});
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Achieve Digital Excellence with Data Analytics Exploration",
-  description: "Maximize your website's performance with Data Analytics Consulting services. As an expert in Digital Marketing Analytics, Web Analytics, and Google Data Analytics, I offer tailored solutions and actionable insights to help you achieve your digital marketing goals.",
+  title: "Leading Data & Web Analytics Services | Eric Analytics",
+  description: "Improve your digital strategy with a Web Analytics Expert. Optimize your campaigns for better results! Schedule your consultation with Eric Analytics today!",
 };
 
 export default function RootLayout({

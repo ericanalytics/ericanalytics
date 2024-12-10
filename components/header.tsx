@@ -28,7 +28,7 @@ const Header: React.FC = () => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav mb-2 mb-lg-0">
+                        <ul className="navbar-nav mb-lg-0">
                             <li className="nav-item">
                                 <a className="nav-link text-white" onClick={() => scrollToSection('about')}>About</a>
                             </li>

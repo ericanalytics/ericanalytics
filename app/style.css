@@ -16,7 +16,7 @@ p.sub-p {
   font-size: 18px;
   font-style: italic;
 }
-p.gag_1 img {
+.gag_1 img {
   max-width: 50px;
   width: auto;
   height: auto;
@@ -277,7 +277,10 @@ p {
   .content-block {
     padding-left: 20px;
   }
-
+  .btn.cs-btn, .contact-section .form-control {
+    width: 100%;
+    margin: 10px 0px;
+}
   .timeline-point {
     left: -10px;
     width: 10px;
@@ -434,6 +437,7 @@ img.dsimg {
     font-weight: 500 !important;
     line-height: 24px !important;
     margin-bottom: 20px;
+    color: #fff;
 	}
     .stats-number {
       font-size: 2rem;
@@ -502,7 +506,7 @@ img.inlineimg1 {
 			    color: rgba(255, 255, 255, 1);
 
         }
-        p.gag_1 {
+        .gag_1 {
           display: flex;
           align-items: center;
       }
@@ -583,6 +587,7 @@ img.inlineimg1 {
   button.btn.btn-block.snd_msg1:hover {
     background: #0000;
     color: #fff;
+    border: 0.5px solid rgba(168, 168, 168, 1);
 }
   button.btn.btn-block.snd_msg1 {
     background-color: white;
@@ -794,7 +799,7 @@ div#services .row .col-md-4{
   margin-bottom: 0px !important;
 }
 @media (max-width: 767px) {
-  p.gag_1 {
+  .gag_1 {
     display: block;
 }
 .number-box {
@@ -817,6 +822,10 @@ div#services .row .col-md-4{
     padding: 10px;
     line-height: 38px;
   }
+  .btn.cs-btn, .contact-section .form-control {
+    width: 100%;
+    margin: 0px 0px;
+}
   .timeline-line, .timeline-point{
           display: none;
   }
@@ -893,22 +902,22 @@ div#services .row .col-md-4{
     width: 100%;
     height: auto;
   }
-      .laptop-frame {
+  .laptop-frame {
         height: 240px;
-    }
-	div#reviewCarousel {
+}
+div#reviewCarousel {
     padding: 65px 0px 40px;
 }
-.carousel-control-prev, .carousel-control-next {
-        width: auto;
-        top: 105%;
-        height: fit-content;
+.laptop-sec .carousel-control-prev, .laptop-sec .carousel-control-next {
+    width: auto;
+    top: 105%;
+    height: fit-content;
 }
-.carousel-control-prev{
-      left: 42%;
+.laptop-sec .carousel-control-prev{
+   left: 42%;
 }
-.carousel-control-next {
-      right: 42%;
+.laptop-sec .carousel-control-next {
+   right: 42%;
 }
 	.carousel-item {
     padding: 20px;

@@ -8,7 +8,7 @@ import Counter from '../components/counter';
 import LogosCrousel from '../components/logos-crousel';
 import Contact from '../components/contact';
 import Image from 'next/image';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './/style.css';
 
 const images = [
@@ -68,8 +68,8 @@ export default function Home() {
             Maximize your website&apos;s performance with Data Analytics Consulting services. As an expert in <span className="spn_1">Digital Marketing Analytics</span>, Web Analytics, and Google Data Analytics, I offer tailored solutions and actionable insights to help you achieve your digital marketing goals.
           </p>
           <div className="cta-buttons">
-            <a onClick={() => { scrollToSection('about'); }} className="btn btn-light me-2 cs-btn">Browse My Work</a>
-            <a onClick={() => { scrollToSection('about'); }} className="btn btn-default cs-btn">Chat With Me</a>
+            <a onClick={() => { scrollToSection('projects'); }} className="btn btn-light me-2 cs-btn">Browse My Work</a>
+            <a onClick={() => { scrollToSection('contact'); }} className="btn btn-default cs-btn">Chat With Me</a>
           </div>
         </div>
         {/* Image Section */}

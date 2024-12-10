@@ -100,7 +100,7 @@ display: none;
 }
 .fter-bg-image {
   position: absolute;
-  margin-top: -638px;
+  margin-top: -675px;
   right: 0;
 }
     /* Responsive Styles */
@@ -815,25 +815,25 @@ div#services .row .col-md-4{
 }
 
 /* Container for the carousel */
-.logo-carousel {
+.sec_2 .logo-carousel {
   width: 100%;
   overflow: hidden;
 }
-.logo-container {
+.sec_2 .logo-container {
   display: flex;
   animation: scroll-logos 20s linear infinite;
 }
-.logo-container .logo img {
+.sec_2 .logo-container .logo img {
   height: 100%;
   max-width: 141px;
 }
-.logo-carousel .logo {
+.sec_2 .logo-carousel .logo {
   margin-right: 30px;
 }
-.logo-carousel:hover .logo-container {
+.sec_2 .logo-carousel:hover .logo-container {
   animation-play-state: paused;
 }
-.logo.wixlogo {
+.sec_2 .logo.wixlogo {
   max-width: 102px;
   margin-left: -20px;
 }

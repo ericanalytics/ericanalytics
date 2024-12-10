@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import YouTubeVideo from '../components/youtube_video';
+import Counter from '../components/counter';
 import LogosCrousel from '../components/logos-crousel';
 import Contact from '../components/contact';
 import Image from 'next/image';
@@ -153,7 +154,7 @@ export default function Home() {
     <div className="col-lg-6 px-sm-5 px-lg-0">
       <h3 className="highlight">Hi, I&apos;m Eric Case</h3>
       <p className="gag_1">
-        Specializing in Google Analytics and Google Ads
+        I Specialize in Google Analytics and Google Ads
         <Image  className="inlineimg1" src="/images/inline.png" alt="Description of image" width={200} height={100}/>
       </p>
       <p>
@@ -166,7 +167,7 @@ export default function Home() {
 
       <p className='sub-p'>Let&apos;s connect to help your business thrive.</p>
 
-      {/* Stats */}
+      {/* Stats
       <div className="d-flex justify-content-between mt-4">
         <div className="stats">
           Experience
@@ -180,7 +181,8 @@ export default function Home() {
           Happy Clients
           <span className="stats-number">300+</span>
         </div>
-      </div>
+      </div>*/}
+      <Counter/>
     </div>
   </div>
 </div>

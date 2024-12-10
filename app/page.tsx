@@ -3,6 +3,7 @@ import Script from 'next/script';
 import React, { useEffect } from 'react';
 import Header from '../components/header';
 import Footer from '../components/footer';
+import YouTubeVideo from '../components/youtube_video';
 import Contact from '../components/contact';
 import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
@@ -174,29 +175,7 @@ export default function Home() {
   </div>
   <div className="row align-items-center px-lg-4">
     {/* YouTube Video */}
-    <div className="col-lg-6 mb-4 youtube-video">
-      <div style={{ position: 'relative', height: '315px', }}>
-        <a href="https://www.youtube.com/watch?v=5cJOeSlWZ7Y" target="_blank" rel="noopener noreferrer">
-          <Image
-            src="/images/Youtube.png"
-            style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}
-            width={560}
-            height={315}
-            alt="YouTube Thumbnail"
-          />
-        </a>
-        <iframe
-          width="100%"
-          height="315"
-          src="https://www.youtube.com/embed/5cJOeSlWZ7Y"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          style={{ display: 'none' }}
-          title="YouTube Video"
-        ></iframe>
-      </div>
-    </div>
+    <YouTubeVideo />
 
     {/* Content Section */}
     <div className="col-lg-6 px-sm-5 px-lg-0">

@@ -173,7 +173,7 @@ display: none;
         height: 82%;
       }
     }
-  
+
 	body{
 	background: #000;
 	font-family: inter;
@@ -285,7 +285,7 @@ p {
   }
 
   .timeline-line {
-    left: 3px;
+    left: 6px;
   }
 }
 img.dsimg {
@@ -294,18 +294,13 @@ img.dsimg {
     height: 100%;
     min-height: 636px;
 }
-
-
-
-
-
 .service-card {
   position: relative;
   padding: 22px;
-  color: #fff;  
+  color: #fff;
 }
 .sec_4 .col-md-4:hover{
-  background-color: #0D0D0D; 
+  background-color: #0D0D0D;
 }
 .sec_4 .col-md-4{
   transition: all 0.3s ease;
@@ -318,21 +313,21 @@ img.dsimg {
   font-weight: 600;
   color: #fff;
   transition: color 0.3s ease;
-     
+
     padding-bottom: 10px;
 }
 .ang_1 h3 {
   margin-bottom: 12px;
 }
 .service-card:hover h3 {
-  color: #fff; 
+  color: #fff;
 }
 
 .service-card p {
   font-size: 16px;
   line-height: 22px;
   font-weight: 300;
-  color: #fff; 
+  color: #fff;
 }
 
 .icon-box {
@@ -369,7 +364,7 @@ img.dsimg {
 
 
 .service-card .bottom-border:hover {
-  background-color: #007bff; 
+  background-color: #007bff;
   max-width: 100%;
   display: none;
 }
@@ -402,7 +397,7 @@ img.dsimg {
   background-color: #007bff; /* Blue color on hover */
 }
 
-  
+
 
     .content-section {
       padding: 50px 0;
@@ -410,6 +405,7 @@ img.dsimg {
     .youtube-video img {
       width: 100%;
       border-radius: 10px;
+      object-fit: contain;
     }
     .title {
       font-weight: 700;
@@ -437,7 +433,7 @@ img.dsimg {
     font-size: 20px !important;
     font-weight: 500 !important;
     line-height: 24px !important;
-    margin-bottom: 20px;	
+    margin-bottom: 20px;
 	}
     .stats-number {
       font-size: 2rem;
@@ -504,7 +500,7 @@ img.inlineimg1 {
 	  line-height: 24px;
             text-align: left;
 			    color: rgba(255, 255, 255, 1);
-				   
+
         }
         p.gag_1 {
           display: flex;
@@ -537,9 +533,9 @@ img.inlineimg1 {
             display: flex;
             justify-content: center;
         }
-		
-		
-		
+
+
+
 		.contact-info h3{
 		  font-size: 48px;
       font-weight: 700;
@@ -610,13 +606,13 @@ img.inlineimg1 {
     font-weight: 700;
 	  line-height: 56px;
 }
-#projects .upr_cnt12 p { 
+#projects .upr_cnt12 p {
    margin-bottom: 60px;
 }
 .upr_cnt12 p {
   font-size: 16px;
   font-weight: 400;
-  margin-top: 15px; 
+  margin-top: 15px;
 	line-height: 24px;
 	color: rgba(255, 255, 255, 1);
 	/* padding: 0px 0px 70px; */
@@ -628,7 +624,7 @@ img.inlineimg1 {
     width: 100%;
     max-width: 860px;
     margin: auto;
-    
+
 }
 .icnbx_contnt32 {
     width: 100%;
@@ -660,7 +656,7 @@ img.inlineimg1 {
       text-decoration: underline; /* Underline on hover */
 	  color: rgba(255, 255, 255, 1);
     }
-    
+
     .search-icon {
       color: #fff;
       font-size: 15px;
@@ -824,6 +820,9 @@ div#services .row .col-md-4{
   .timeline-line, .timeline-point{
           display: none;
   }
+  .content-block {
+    padding-left: 5px;
+}
   .content-section {
     padding: 40px 20px;
 }
@@ -898,12 +897,19 @@ div#services .row .col-md-4{
         height: 240px;
     }
 	div#reviewCarousel {
-    padding: 50px 0px;
+    padding: 65px 0px 40px;
 }
 .carousel-control-prev, .carousel-control-next {
-        width: 85%;
-        top: 68%;
-    }
+        width: auto;
+        top: 105%;
+        height: fit-content;
+}
+.carousel-control-prev{
+      left: 42%;
+}
+.carousel-control-next {
+      right: 42%;
+}
 	.carousel-item {
     padding: 20px;
 }
@@ -1008,25 +1014,30 @@ footer.footer.container {
   .navbar-brand {
     order: -1; /* Move logo to the left on mobile */
   }
-  
+
   .search-icon {
     display: none; /* Hide the search icon on mobile */
   }
-  
+
   .navbar-collapse {
     text-align: center; /* Center the collapsed items */
   }
 }
+@media (max-width: 1024px) {
+  .timeline-line {
+    max-height: 74% !important;
+}
+}
 @media (max-width: 1400px) {
 .timeline-line {
-  max-height: 605px;
+  max-height: 77%;
 }
 }
 /* Desktop (min-width: 992px) */
 @media (min-width: 992px) {
   .navbar-brand {
     position: absolute;
-    left: 50%;   
+    left: 50%;
   }
       .navbar-expand-lg .navbar-collapse {
         display: flex !important;
@@ -1034,7 +1045,7 @@ footer.footer.container {
         justify-content: space-between;
         /* max-width: 1089px; */
         margin: auto;
-  }	
+  }
   div#services .row .border-right {
       background: linear-gradient(#000000, #4D4D4D);
       position: absolute;

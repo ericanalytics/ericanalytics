@@ -1,12 +1,12 @@
 'use client';
 import Script from 'next/script';
 import React, { useEffect } from 'react';
-import Header from '../components/header'; 
-import Footer from '../components/footer'; 
+import Header from '../components/header';
+import Footer from '../components/footer';
 import Contact from '../components/contact';
 import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import './/style.css'; 
+import './/style.css';
 
 const images = [
   { src: '/images/R44 Performance 3.png', width: 800, height: 600 },
@@ -22,7 +22,7 @@ const images = [
 
 export default function Home() {
 
- 
+
     // Scroll function to navigate to specific sections
     const scrollToSection = (sectionId: string) => {
         const section = document.getElementById(sectionId);
@@ -44,8 +44,8 @@ export default function Home() {
       {/* Using Next.js Script component for loading external scripts */}
       <Script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" strategy="lazyOnload" />
       <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" strategy="lazyOnload" />
-      
-      
+
+
       {/* Adding fonts using link tags */}
       <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
@@ -81,35 +81,35 @@ export default function Home() {
   </section>
 {/* New Logo Section */}
 <section className="sec_2">
-  <div className="container">
-    <div className="row">
-      <div className="col">
-        <Image  src="/images/wix-logo.png" className="img-fluid" alt="Wix log" width={200} height={100} />
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <Image src="/images/wix-logo.png" className="img-fluid" alt="Wix" width={200} height={100} />
+          </div>
+          <div className="col">
+            <Image src="/images/google-logo.png" className="img-fluid" alt="Google" width={200} height={100} />
+          </div>
+          <div className="col">
+            <Image src="/images/microsoft-logo.png" className="img-fluid" alt="Microsoft" width={200} height={100} />
+          </div>
+          <div className="col">
+            <Image src="/images/meta-logo.png" className="img-fluid" alt="Meta" width={200} height={100} />
+          </div>
+          <div className="col">
+            <Image src="/images/shopify-logo.png" className="img-fluid" alt="Shopify" width={200} height={100} />
+          </div>
+          <div className="col">
+            <Image src="/images/magento-logo.png" className="img-fluid" alt="Magento" width={200} height={100} />
+          </div>
+          <div className="col">
+            <Image src="/images/wordpress-logo.png" className="img-fluid" alt="WordPress" width={200} height={100} />
+          </div>
+          <div className="col">
+            <Image src="/images/unbounce-logo.png" className="img-fluid" alt="Unbounce" width={200} height={100} />
+          </div>
+        </div>
       </div>
-      <div className="col">
-        <Image  src="/images/google-logo.png" className="img-fluid" alt="Google" width={200} height={100} />
-      </div>
-      <div className="col">
-        <Image  src="/images/microsoft-logo.png" className="img-fluid" alt="Microsoft" width={200} height={100} />
-      </div>
-      <div className="col">
-        <Image  src="/images/meta-logo.png" className="img-fluid" alt="Meta" width={200} height={100} />
-      </div>
-      <div className="col">
-        <Image  src="/images/shopify-logo.png" className="img-fluid" alt="Shopify" width={200} height={100} />
-      </div>
-      <div className="col">
-        <Image  src="/images/magento-logo.png" className="img-fluid" alt="Magento" width={200} height={100} />
-      </div>
-      <div className="col">
-        <Image  src="/images/wordpress-logo.png" className="img-fluid" alt="WordPress" width={200} height={100} />
-      </div>
-      <div className="col"> 
-        <Image  src="/images/unbounce-logo.png" className="img-fluid" alt="Unbounce" width={200} height={100} />
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 {/* New Section 3: Data Analytics */}
 <div className="section3 text-white">
@@ -120,7 +120,7 @@ export default function Home() {
         Are you ready to transform your website data into a powerful asset that drives business growth? As a dedicated digital data analytics expert, I&apos;m here to help you unlock the full potential of your data.
       </p>
     </div>
-    <div className="row align-items-center">
+    <div className="row align-items-center mt-5">
       {/* Left side: Image or icon structure */}
       <div className="col-md-6 ds_img1">
         <Image  src="/images/ds.png" className="dsimg" alt="Data visualization image" width={371} height={636}/>
@@ -172,12 +172,12 @@ export default function Home() {
     <h2>Your Success Partner: Why Choosing Me Makes Sense</h2>
     <p>Trust me to optimize your online performance with precision analytics.</p>
   </div>
-  <div className="row align-items-center">
+  <div className="row align-items-center px-lg-4">
     {/* YouTube Video */}
     <div className="col-lg-6 mb-4 youtube-video">
       <div style={{ position: 'relative', height: '315px', }}>
         <a href="https://www.youtube.com/watch?v=5cJOeSlWZ7Y" target="_blank" rel="noopener noreferrer">
-          <Image 
+          <Image
             src="/images/Youtube.png"
             style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}
             width={560}
@@ -199,7 +199,7 @@ export default function Home() {
     </div>
 
     {/* Content Section */}
-    <div className="col-lg-6">
+    <div className="col-lg-6 px-sm-5 px-lg-0">
       <h3 className="highlight">Hi, I&apos;m Eric Case</h3>
       <p className="gag_1">
         Specializing in Google Analytics and Google Ads
@@ -259,7 +259,7 @@ export default function Home() {
         <p>By implementing Google Analytics, I can accurately track your website traffic, user behavior, and conversions. This setup provides you with valuable insights into how visitors interact with your site. I also configure custom reports and dashboards tailored to your business goals and KPIs, ensuring you have the information you need to make data-driven decisions.</p>
       </div>
     </div>
-      
+
     {/* Card 2 */}
     <div className="col-md-4 mb-4">
       <div className="service-card">
@@ -398,7 +398,7 @@ export default function Home() {
             Discover what my satisfied clients have to say about my web analytics services and data analytics services. I take pride in delivering exceptional client service and greatly value their feedback.
           </p>
         </div>
-        
+
         {/* Indicators/dots */}
         <div className="carousel-indicators cci">
           <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1" style={{ width: '10px', height: '10px' }}></button>
@@ -450,13 +450,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>   
+    </div>
       {/* Contact Section */}
             <Contact />
      <div className="fter-bg-image">
       <Image src="/images/texture-42.png"  width={634} height={900} className="bg-image-footer" alt="Bg footer"/>
-    </div>      
-      {/* Footer Section */}      
+    </div>
+      {/* Footer Section */}
       <Footer scrollToSection={scrollToSection} />
     </div>
     </>

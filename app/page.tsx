@@ -345,7 +345,7 @@ export default function Home() {
   </div>
 
      {/* Review Carousel Section */}
-     <div id="reviewCarousel" className="carousel slide" data-bs-ride="carousel">
+     <div id="reviewCarousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-wrap="true">
         <div className="upr_cnt12 max_widt1 text-center text-white">
           <h2>Hear What My Clients Have to Say</h2>
           <p>
@@ -425,29 +425,9 @@ export default function Home() {
             </div>
           </div>
 
-          {/* New Carousel Item */}
-          <div className="carousel-item">
-            <div className="row justify-content-center">
-              <div className="col-lg-5 review-box">
-                <div className="review-author">New Client</div>
-                <div className="review-role">New Role (Position)</div>
-                <p className="review-content">
-                  This is a new review! Eric exceeded expectations in delivering high-quality results. Highly recommended for anyone looking for expert analytics and marketing help.
-                </p>
-                <div className="rating-stars">★★★★★</div>
-              </div>
-              <div className="col-lg-5 review-box">
-                <div className="review-author">Another Client</div>
-                <div className="review-role">Another Company (CEO)</div>
-                <p className="review-content">
-                  We saw immediate improvements after working with Eric. His expertise in analytics and online marketing is exceptional.
-                </p>
-                <div className="rating-stars">★★★★★</div>
-              </div>
-            </div>
-          </div>
+
         </div>
-        </div>
+       </div>
       </div>
       {/* Contact Section */}
             <Contact />

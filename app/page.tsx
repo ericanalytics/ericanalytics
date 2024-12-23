@@ -45,8 +45,9 @@ export default function Home() {
     <>
       {/* Add your components here */}
       {/* Using Next.js Script component for loading external scripts */}
-      <Script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" strategy="lazyOnload" />
-      <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" strategy="lazyOnload" />
+      <Script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" strategy="beforeInteractive" />
+      <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" strategy="beforeInteractive" />
+      <Script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" strategy="beforeInteractive" />
 
 
       {/* Adding fonts using link tags */}
@@ -356,6 +357,7 @@ export default function Home() {
         <div className="carousel-indicators cci">
           <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1" style={{ width: '10px', height: '10px' }}></button>
           <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1" aria-label="Slide 2" style={{ width: '10px', height: '10px' }}></button>
+          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="2" aria-label="Slide 3" style={{ width: '10px', height: '10px' }}></button>
         </div>
 
         {/* The slideshow/carousel */}
@@ -374,7 +376,7 @@ export default function Home() {
                 <div className="review-author">Andrew Robison</div>
                 <div className="review-role">Northwest Strings (CEO)</div>
                 <p className="review-content">
-                I hired Eric to help us get better google ad conversions. He&apos;s been an absolute pleasure to work with, thoroughly reliable and done an excellent job at helping us in our business. I can&apos;t recommend him enough!
+                  I hired Eric to help us get better google ad conversions. He&apos;s been an absolute pleasure to work with, thoroughly reliable and done an excellent job at helping us in our business. I can&apos;t recommend him enough!
                 </p>
                 <div className="rating-stars">★★★★★</div>
               </div>
@@ -387,7 +389,7 @@ export default function Home() {
                 <div className="review-author">Shari Altman</div>
                 <div className="review-role">Mypurmist, COO</div>
                 <p className="review-content">
-                I found Eric to be quite capable in handling whatever programming requirements we had for our Shopify site and Google Analytics, including researching issues which we had to address in upgrading our site -- i.e. deciding which approach, which theme, which app to use. I would definitely work with him again.
+                  I found Eric to be quite capable in handling whatever programming requirements we had for our Shopify site and Google Analytics, including researching issues which we had to address in upgrading our site -- i.e. deciding which approach, which theme, which app to use. I would definitely work with him again.
                 </p>
                 <div className="rating-stars">★★★★★</div>
               </div>
@@ -395,15 +397,58 @@ export default function Home() {
                 <div className="review-author">Mohammad</div>
                 <div className="review-role">Manna Dew Bakery (CEO)</div>
                 <p className="review-content">
-                 He is one of the best I&apos;ve ever worked with. I worked with many marketers, he&apos;s the most capable technically I&apos;ve worked with.
+                  He is one of the best I&apos;ve ever worked with. I worked with many marketers, he&apos;s the most capable technically I&apos;ve worked with.
+                </p>
+                <div className="rating-stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="carousel-item">
+            <div className="row justify-content-center">
+              <div className="col-lg-5 review-box">
+                <div className="review-author">Valters Lauzums</div>
+                <div className="review-role">Hypersonic, Principal Partner</div>
+                <p className="review-content">
+                  Eric is an exceptional individual with many different talents and is someone I trust for important projects. In addition to expert-level analytics deployment & analysis, Eric is a tried-and-tested Google Ads expert who will go the extra mile to ensure that campaigns perform and deliver a return on ad spend. He also can create exceptionally well-coded websites and work in a variety of capacities in digital media. I enthusiastically recommend Eric and continue to count on him to help my business grow.
+                </p>
+                <div className="rating-stars">★★★★★</div>
+              </div>
+              <div className="col-lg-5 review-box">
+                <div className="review-author">James Sheff</div>
+                <div className="review-role">Anytime eCommerce, Head of Marketing</div>
+                <p className="review-content">
+                  Eric provided exceptional support with Google Conversion Tracking and Analytics. His expertise, attention to detail, and clear communication made the process smooth and effective. I highly recommend Eric to anyone seeking expert assistance in optimizing and setting up google advert and analytics.
+                </p>
+                <div className="rating-stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+
+          {/* New Carousel Item */}
+          <div className="carousel-item">
+            <div className="row justify-content-center">
+              <div className="col-lg-5 review-box">
+                <div className="review-author">New Client</div>
+                <div className="review-role">New Role (Position)</div>
+                <p className="review-content">
+                  This is a new review! Eric exceeded expectations in delivering high-quality results. Highly recommended for anyone looking for expert analytics and marketing help.
+                </p>
+                <div className="rating-stars">★★★★★</div>
+              </div>
+              <div className="col-lg-5 review-box">
+                <div className="review-author">Another Client</div>
+                <div className="review-role">Another Company (CEO)</div>
+                <p className="review-content">
+                  We saw immediate improvements after working with Eric. His expertise in analytics and online marketing is exceptional.
                 </p>
                 <div className="rating-stars">★★★★★</div>
               </div>
             </div>
           </div>
         </div>
+        </div>
       </div>
-    </div>
       {/* Contact Section */}
             <Contact />
      <div className="fter-bg-image">

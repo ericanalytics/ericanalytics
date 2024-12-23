@@ -364,17 +364,17 @@ export default function Home() {
             <div className="row justify-content-center rv_box1">
               <div className="col-lg-5 review-box">
                 <div className="review-author">Mike Davis</div>
-                <div className="review-role">Bonjoon Ku, CEO</div>
+                <div className="review-role">My Probate Partner (CEO)</div>
                 <p className="review-content">
                   Working with Eric was a great experience. Their advertising campaigns were expertly crafted. Eric is a highly skilled and professional individual, and I would not hesitate to work with them again. I wholeheartedly recommend him to anyone looking for an exceptional advertising campaign. Thank you for the fantastic work!
                 </p>
                 <div className="rating-stars">★★★★★</div>
               </div>
               <div className="col-lg-5 review-box">
-                <div className="review-author">Jake</div>
-                <div className="review-role">Bonjoon Ku, CEO</div>
+                <div className="review-author">Andrew Robison</div>
+                <div className="review-role">Northwest Strings (CEO)</div>
                 <p className="review-content">
-                  Eric was easy to communicate with, responsive and knowledgeable with all things Google. I am very impressed with the work that he did in setting up our GA and GTM for our website. I will be using Eric again for SEO and Google Adwords advice and implementation as our website builds traction.
+                I hired Eric to help us get better google ad conversions. He's been an absolute pleasure to work with, thoroughly reliable and done an excellent job at helping us in our business. I can&apos;t recommend him enough!
                 </p>
                 <div className="rating-stars">★★★★★</div>
               </div>
@@ -384,18 +384,18 @@ export default function Home() {
           <div className="carousel-item">
             <div className="row justify-content-center">
               <div className="col-lg-5 review-box">
-                <div className="review-author">Anna Smith</div>
-                <div className="review-role">CEO, Tech Solutions</div>
+                <div className="review-author">Shari Altman</div>
+                <div className="review-role">Mypurmist, COO</div>
                 <p className="review-content">
-                  Eric is a wonderful professional to work with. He delivers results that consistently exceed expectations. I would highly recommend his services to anyone looking for real digital marketing expertise.
+                I found Eric to be quite capable in handling whatever programming requirements we had for our Shopify site and Google Analytics, including researching issues which we had to address in upgrading our site -- i.e. deciding which approach, which theme, which app to use. I would definitely work with him again.
                 </p>
                 <div className="rating-stars">★★★★★</div>
               </div>
               <div className="col-lg-5 review-box">
-                <div className="review-author">John Carter</div>
-                <div className="review-role">COO, Web Innovations</div>
+                <div className="review-author">Mohammad</div>
+                <div className="review-role">Manna Dew Bakery (CEO)</div>
                 <p className="review-content">
-                  Eric&apos;s dedication to his work is outstanding. His detailed understanding of Google Analytics and ad strategies helped our business achieve significant growth.
+                 He is one of the best I've ever worked with. I worked with many marketers, he&apos;s the most capable technically I&apos;ve worked with.
                 </p>
                 <div className="rating-stars">★★★★★</div>
               </div>

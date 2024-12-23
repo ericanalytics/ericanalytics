@@ -803,7 +803,7 @@ div#services .row .col-md-4{
 }
 .col-lg-5.review-box {
     height: 100vh;
-    max-height: 275px;
+    max-height: 288px;
 }
 .sec_2 .col:first-child img {
   position: relative;
@@ -871,7 +871,7 @@ div#services .row .col-md-4{
   }
   .col-lg-5.review-box {
     height: 100vh;
-    max-height: 304px;
+    max-height: 340px;
 }
   .service-card p {
     font-size: 0.9rem;

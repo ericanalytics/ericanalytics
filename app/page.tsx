@@ -364,11 +364,11 @@ export default function Home() {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <div className="row justify-content-center rv_box1">
-              <div className="col-lg-5 review-box">
-                <div className="review-author">Mike Davis</div>
-                <div className="review-role">My Probate Partner (CEO)</div>
+            <div className="col-lg-5 review-box">
+                <div className="review-author">James Sheff</div>
+                <div className="review-role">Anytime eCommerce, Head of Marketing</div>
                 <p className="review-content">
-                  Working with Eric was a great experience. Their advertising campaigns were expertly crafted. Eric is a highly skilled and professional individual, and I would not hesitate to work with them again. I wholeheartedly recommend him to anyone looking for an exceptional advertising campaign. Thank you for the fantastic work!
+                  Eric provided exceptional support with Google Conversion Tracking and Analytics. His expertise, attention to detail, and clear communication made the process smooth and effective. I highly recommend Eric to anyone seeking expert assistance in optimizing and setting up google advert and analytics.
                 </p>
                 <div className="rating-stars">★★★★★</div>
               </div>
@@ -415,10 +415,10 @@ export default function Home() {
                 <div className="rating-stars">★★★★★</div>
               </div>
               <div className="col-lg-5 review-box">
-                <div className="review-author">James Sheff</div>
-                <div className="review-role">Anytime eCommerce, Head of Marketing</div>
+                <div className="review-author">Mike Davis</div>
+                <div className="review-role">My Probate Partner (CEO)</div>
                 <p className="review-content">
-                  Eric provided exceptional support with Google Conversion Tracking and Analytics. His expertise, attention to detail, and clear communication made the process smooth and effective. I highly recommend Eric to anyone seeking expert assistance in optimizing and setting up google advert and analytics.
+                  Working with Eric was a great experience. Their advertising campaigns were expertly crafted. Eric is a highly skilled and professional individual, and I would not hesitate to work with them again. I wholeheartedly recommend him to anyone looking for an exceptional advertising campaign. Thank you for the fantastic work!
                 </p>
                 <div className="rating-stars">★★★★★</div>
               </div>

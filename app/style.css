@@ -871,7 +871,7 @@ div#services .row .col-md-4{
   }
   .col-lg-5.review-box {
     height: 100vh;
-    max-height: 380px;
+    max-height: 400px;
 }
   .service-card p {
     font-size: 0.9rem;

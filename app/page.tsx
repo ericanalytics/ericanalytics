@@ -374,7 +374,7 @@ export default function Home() {
                 <div className="review-author">Andrew Robison</div>
                 <div className="review-role">Northwest Strings (CEO)</div>
                 <p className="review-content">
-                I hired Eric to help us get better google ad conversions. He's been an absolute pleasure to work with, thoroughly reliable and done an excellent job at helping us in our business. I can't recommend him enough!
+                I hired Eric to help us get better google ad conversions. He&apos;s been an absolute pleasure to work with, thoroughly reliable and done an excellent job at helping us in our business. I can&apos;t recommend him enough!
                 </p>
                 <div className="rating-stars">★★★★★</div>
               </div>
@@ -395,7 +395,7 @@ export default function Home() {
                 <div className="review-author">Mohammad</div>
                 <div className="review-role">Manna Dew Bakery (CEO)</div>
                 <p className="review-content">
-                 He is one of the best I've ever worked with. I worked with many marketers, he's the most capable technically I've worked with.
+                 He is one of the best I&apos;ve ever worked with. I worked with many marketers, he&apos;s the most capable technically I&apos;ve worked with.
                 </p>
                 <div className="rating-stars">★★★★★</div>
               </div>

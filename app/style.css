@@ -652,10 +652,10 @@ img.inlineimg1 {
       color: #fff; /* White text for navigation */
       padding: 0 20px;
       text-align: center;
-      font-size: 16px;
+      font-size: 20px;
       position: relative;
 	  font-weight: 400;
-    line-height: 24px;
+    line-height: 34px;
 	font-family: Jost;
     }
     .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {

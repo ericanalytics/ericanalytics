@@ -364,7 +364,7 @@ export default function Home() {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <div className="row justify-content-center rv_box1">
-            <div className="col-lg-5 col-12 review-box">
+            <div className="col-lg-5 review-box">
                 <div className="review-author">James Sheff</div>
                 <div className="review-role">Anytime eCommerce, Head of Marketing</div>
                 <p className="review-content">
@@ -372,7 +372,7 @@ export default function Home() {
                 </p>
                 <div className="rating-stars">★★★★★</div>
               </div>
-              <div className="col-lg-5 col-12 review-box">
+              <div className="col-lg-5 review-box">
                 <div className="review-author">Andrew Robison</div>
                 <div className="review-role">Northwest Strings (CEO)</div>
                 <p className="review-content">
@@ -385,7 +385,7 @@ export default function Home() {
 
           <div className="carousel-item">
             <div className="row justify-content-center">
-              <div className="col-lg-5 col-12 review-box">
+              <div className="col-lg-5 review-box">
                 <div className="review-author">Shari Altman</div>
                 <div className="review-role">Mypurmist, COO</div>
                 <p className="review-content">
@@ -393,7 +393,7 @@ export default function Home() {
                 </p>
                 <div className="rating-stars">★★★★★</div>
               </div>
-              <div className="col-lg-5 col-12 review-box">
+              <div className="col-lg-5 review-box">
                 <div className="review-author">Mohammad</div>
                 <div className="review-role">Manna Dew Bakery (CEO)</div>
                 <p className="review-content">
@@ -406,7 +406,7 @@ export default function Home() {
 
           <div className="carousel-item">
             <div className="row justify-content-center">
-              <div className="col-lg-5 col-12 review-box">
+              <div className="col-lg-5 review-box">
                 <div className="review-author">Valters Lauzums</div>
                 <div className="review-role">Hypersonic, Principal Partner</div>
                 <p className="review-content">
@@ -414,7 +414,7 @@ export default function Home() {
                 </p>
                 <div className="rating-stars">★★★★★</div>
               </div>
-              <div className="col-lg-5 col-12 review-box">
+              <div className="col-lg-5 review-box">
                 <div className="review-author">Mike Davis</div>
                 <div className="review-role">My Probate Partner (CEO)</div>
                 <p className="review-content">

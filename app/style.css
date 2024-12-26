@@ -785,7 +785,7 @@ form.fom_1 {
   height: 100%!important;
 }
 .contact-section .contact-info img {
-  width: 100%;
+  width: 94%;
 }
 .contact-section textarea.form-control {
   height: 100%;
@@ -870,8 +870,8 @@ div#services .row .col-md-4{
     font-size: 1.1rem;
   }
   .col-lg-5.review-box {
-    height: 100vh;
-    max-height: 400px;
+    height: unset;
+    max-height: unset;
 }
   .service-card p {
     font-size: 0.9rem;
@@ -898,6 +898,7 @@ div#services .row .col-md-4{
   .upr_cnt12 p, .gag_1 {
     font-size: 16px;
     padding: 10px;
+    margin-bottom: 0px;
   }
   .youtube-video {
     text-align: center;
@@ -1078,6 +1079,9 @@ img.objct {
 footer.footer.container {
     border-top: 1px solid;
 }
+div#about h4 {
+  font-size: 16px;
+}
 }
 /* Mobile (max-width: 991px) */
 @media (max-width: 991px) {
@@ -1092,6 +1096,9 @@ footer.footer.container {
   .navbar-collapse {
     text-align: center; /* Center the collapsed items */
   }
+  .carousel-inner.mobile {
+    display: block;
+  }
 }
 @media (max-width: 1400px) {
 .timeline-line {
@@ -1100,6 +1107,9 @@ footer.footer.container {
 }
 /* Desktop (min-width: 992px) */
 @media (min-width: 992px) {
+  .carousel-inner.mobile {
+    display: none;
+  }
   .navbar-brand {
     position: absolute;
     left: 50%;

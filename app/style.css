@@ -938,9 +938,9 @@ div#services .row .col-md-4{
     text-align: center;
   }
   .hero h1.custom-heading {
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 20px;
-	        line-height: 34px;
+	  line-height: 42px;
   }
 
   .hero .content {
@@ -1089,6 +1089,10 @@ div#about h4 {
     order: -1; /* Move logo to the left on mobile */
   }
 
+  ul.navbar-nav {
+    max-width: 100%;
+}
+
   .search-icon {
     display: none; /* Hide the search icon on mobile */
   }
@@ -1163,4 +1167,31 @@ div#services .border-bottom-cc {
   .bg-color{
     top: -40%;
   }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contact-info h3 {
+    font-size: 26px;
+    line-height: 35px;
+}
+.upr_cnt12 h2 {
+  font-size: 30px;
+  line-height: 42px;
+}
+.highlight {
+  font-size: 26px;
+  line-height: 50px;
+}
+.highlight + .gag_1 {
+  font-size: 18px !important;
+}
+.custom-heading {
+  font-size: 32px;
+  line-height: 42px;
+}
+.cta-buttons {
+  display: flex;
+}
+.cta-buttons a {
+  padding: 12px 15px;
+}
 }

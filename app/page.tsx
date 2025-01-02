@@ -43,8 +43,22 @@ export default function Home() {
 
   return (
     <>
+      {/* Add your components here */}
+      {/* Using Next.js Script component for loading external scripts */}
+      <Script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" strategy="beforeInteractive" />
+      <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" strategy="beforeInteractive" />
+      <Script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" strategy="beforeInteractive" />
+
+      <link rel="canonical" href="https://www.ericanalytics.net/" />
+      {/* Adding fonts using link tags */}
+      <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+        <meta name="google-site-verification" content="dkHfE2aXKPhzbglrht7IvsCHbOos63FWj3kyTT4JNvM" />
+
     <div>
     <Header />
+
   {/* Hero Section */}
   <section className="hero">
     <div className="container">

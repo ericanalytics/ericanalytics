@@ -87,7 +87,8 @@ export default function Home() {
 {/* New Logo Section */}
 <LogosCrousel />
 
-{/* New Section 3: Data Analytics */}
+
+{/* New Section 3  Data Analytics */}
 <div className="section3 text-white">
   <div className="container">
     <div className="upr_cnt12 max_widt1 text-center">

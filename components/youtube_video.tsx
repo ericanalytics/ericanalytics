@@ -13,7 +13,7 @@ const YouTubeVideo = () => {
       <div style={{ position: 'relative', height: '315px' }}>
           <Image
             src="/images/Ideal_Partner.png"
-            alt="YouTube Thumbnail"
+            alt="Eric Case YouTube Video Thumbnail"
             width={560}
             height={315}
             style={{

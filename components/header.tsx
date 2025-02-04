@@ -23,7 +23,7 @@ const Header: React.FC = () => {
             <nav className="navbar navbar-expand-lg navbar-custom">
                 <div className="container justify-content-between">
                     <a className="navbar-brand" onClick={() => scrollToSection('home')}>
-                        <Image className="logo" src="/images/log.png" alt="Logo" width={100} height={50} />
+                        <Image className="logo" src="/images/log.png" alt="Eric Analytics Logo" width={100} height={50} />
                     </a>
                     <button
                         className="navbar-toggler d-lg-none"

@@ -10,10 +10,11 @@ import Contact from '../components/contact';
 import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './/style.css';
+import Carousel from "../components/Carousel";
 
 const images = [
   { src: '/images/R44 Performance 3.png', width: 800, height: 600 },
-  { src: '/images/pr-2.png', width: 800, height: 600 },
+  { src: '/images/pr-2.png', alt: 'E-commerce Digital Marketing Services', width: 800, height: 600 },
   { src: '/images/pr-3.png', width: 800, height: 600 },
   { src: '/images/Manna.png', width: 800, height: 600 },
   { src: '/images/Manna-2.png', width: 800, height: 600 },
@@ -100,7 +101,7 @@ export default function Home() {
     <div className="row align-items-center mt-5">
       {/* Left side: Image or icon structure */}
       <div className="col-md-6 ds_img1">
-        <Image  src="/images/ds.png" className="dsimg" alt="Data visualization image" width={371} height={636}/>
+        <Image  src="/images/ds.png" className="dsimg" alt="Data Analytics and Visualization" width={371} height={636}/>
       </div>
 
       {/* Right side: Text content with timeline and line */}
@@ -335,11 +336,7 @@ export default function Home() {
           </div>
 
           <div className="carousel-inner">
-            {images.map((src, index) => (
-              <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
-                <Image src={src} className="d-block w-100" alt={`Slide ${index + 1}`} style={{ width: '100%', height: 'auto' }} />
-              </div>
-            ))}
+          <Carousel images={images} />
           </div>
         </div>
       </div>

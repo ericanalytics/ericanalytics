@@ -13,7 +13,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
                 {/* Footer Logo */}
                 <div className="footer-logo">
                     <a className="navbar-brand1" href="#">
-                        <Image className="logo" src="/images/log.png" alt="Logo" width={200} height={100} />
+                        <Image className="logo" src="/images/log.png" alt="Eric Analytics Website Logo" width={200} height={100} />
                     </a>
                 </div>
 

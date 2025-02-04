@@ -13,15 +13,15 @@ import './/style.css';
 import Carousel from "../components/Carousel";
 
 const images = [
-  { src: '/images/R44 Performance 3.png', width: 800, height: 600 },
+  { src: '/images/R44 Performance 3.png', alt: 'R44 Performance Website', width: 800, height: 600 },
   { src: '/images/pr-2.png', alt: 'E-commerce Digital Marketing Services', width: 800, height: 600 },
-  { src: '/images/pr-3.png', width: 800, height: 600 },
-  { src: '/images/Manna.png', width: 800, height: 600 },
-  { src: '/images/Manna-2.png', width: 800, height: 600 },
-  { src: '/images/Manna-3.png', width: 800, height: 600 },
-  { src: '/images/Vital.jpg', width: 800, height: 600 },
-  { src: '/images/Vital-2.png', width: 800, height: 600 },
-  { src: '/images/Vital-3.png', width: 800, height: 600 },
+  { src: '/images/pr-3.png', alt: 'Google Ads Campaign Setup Strategy', width: 800, height: 600 },
+  { src: '/images/Manna.png', alt: 'Manna Dew Website Home Page', width: 800, height: 600 },
+  { src: '/images/Manna-2.png', alt: 'Boost Sales on Your Shopify Store With Google Ads', width: 800, height: 600 },
+  { src: '/images/Manna-3.png', alt: 'Google Ads Conversion Tracking', width: 800, height: 600 },
+  { src: '/images/Vital.jpg', alt: 'Vital Track Website', width: 800, height: 600 },
+  { src: '/images/Vital-2.png', alt: 'Web Analytics Services By Eric Analytics', width: 800, height: 600 },
+  { src: '/images/Vital-3.png', alt: 'Effective Google Ads Campaign Strategy', width: 800, height: 600 },
 ];
 
 export default function Home() {

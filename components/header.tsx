@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 
 const Header: React.FC = () => {
@@ -19,25 +18,10 @@ const Header: React.FC = () => {
         }
     };
 
-    const schema = {
-        "@context": "https://schema.org/",
-        "@type": "WebSite",
-        "name": "Eric Analytics",
-        "url": "https://www.ericanalytics.net/",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": "{search_term_string}",
-            "query-input": "required name=search_term_string"
-        }
-    };
+
     return (
         <header>
-           <Head>
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-                />
-            </Head>
+
             <nav className="navbar navbar-expand-lg navbar-custom">
                 <div className="container justify-content-between">
                     <a className="navbar-brand" onClick={() => scrollToSection('home')}>

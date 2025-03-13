@@ -11,6 +11,7 @@ import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './/style.css';
 import Carousel from "../components/Carousel";
+import Head from 'next/head';
 
 const images = [
   { src: '/images/R44 Performance 3.png', alt: 'R44 Performance Website', width: 800, height: 600 },
@@ -50,7 +51,7 @@ export default function Home() {
       <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js" strategy="beforeInteractive" />
       <Script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" strategy="beforeInteractive" />
 
-      <link rel="canonical" href="https://www.ericanalytics.net/" />
+      <link rel="canonical" href="https://ericanalytics.net/" />
       {/* Adding fonts using link tags */}
       <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
       <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />

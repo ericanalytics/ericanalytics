@@ -11,7 +11,6 @@ import Image from 'next/image';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './/style.css';
 import Carousel from "../components/Carousel";
-import Head from 'next/head';
 
 const images = [
   { src: '/images/R44 Performance 3.png', alt: 'R44 Performance Website', width: 800, height: 600 },

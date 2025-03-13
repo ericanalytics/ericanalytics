@@ -53,7 +53,7 @@ const Header: React.FC = () => {
                         </ul>
                         <ul className="navbar-nav mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link text-white" onClick={() => { scrollToSection('reviewCarousel'); handleNavClick(); }}>Testimonial</a>
+                                <a className="nav-link text-white chkk" onClick={() => { scrollToSection('reviewCarousel'); handleNavClick(); }}>Testimonial</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link text-white" onClick={() => { scrollToSection('contact'); handleNavClick(); }}>Contact</a>

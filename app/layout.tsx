@@ -25,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-
+ <head>
+ <link rel="icon" href="/favicon.png" type="image/x-icon" sizes="16x16"/>
+ </head>
       <body style={{ background: '#000', fontFamily: 'Inter, sans-serif'}}
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

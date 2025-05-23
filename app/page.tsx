@@ -278,7 +278,7 @@ export default function Home() {
         </div>
         <div className="number-box">06</div>
         <h3>Conversion Optimization Services</h3>
-        <p>Connecting Google Search Console enables you to monitor and optimize your website&apos;s search performance. I utilize search analytics data to improve keyword targeting, click-through rates, and overall SEO strategy. By analyzing search queries, impressions, and click data, I help you identify opportunities for growth and ensure your site meets Google&apos;s search standards.</p>
+        <p>Conversion optimization is about turning your website visitors into customers. I use data-driven techniques to enhance your website&apos;s user experience, streamline the conversion funnel, and reduce drop-off rates. By conducting A/B testing, analyzing user behavior, and implementing best practices, I ensure your website is optimized for conversions, leading to increased sales and revenue.</p>
       </div>
     </div>
   </div>

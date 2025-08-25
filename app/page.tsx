@@ -8,6 +8,7 @@ import Counter from '../components/counter';
 import LogosCrousel from '../components/logos-crousel';
 import Contact from '../components/contact';
 import Image from 'next/image';
+import FAQ from '../components/faq';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './/style.css';
 import Carousel from "../components/Carousel";
@@ -428,6 +429,8 @@ export default function Home() {
         </div>
        </div>
       </div>
+       
+       <FAQ />
       {/* Contact Section */}
             <Contact />
      <div className="fter-bg-image">

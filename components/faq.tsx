@@ -52,7 +52,7 @@ const FAQ: React.FC = () => {
                             <Accordion.Item eventKey="6">
                                 <Accordion.Header>How can I contact Eric Analytics to discuss my analytics needs?</Accordion.Header>
                                 <Accordion.Body>
-                                You can contact Eric Analytics through the website, ericanalytics.net, to schedule a consultation. The "Get In Touch" section provides details for reaching out to discuss how its Web Analytics and Google Analytics services can support your business growth.
+                                {`You can contact Eric Analytics through the website, ericanalytics.net, to schedule a consultation. The "Get In Touch" section provides details for reaching out to discuss how its Web Analytics and Google Analytics services can support your business growth.`}
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>

@@ -669,7 +669,7 @@ img.inlineimg1 {
  .navbar-custom {
       background-color: #000; /* Header background */
       padding: 15px 0;
-	      margin: 40px 0px 0px;
+	      /* margin: 40px 0px 0px; */
     }
     .navbar-brand img {
          width: auto;
@@ -1143,6 +1143,9 @@ div#about h4 {
   .carousel-inner.mobile {
     display: block;
   }
+  a.navbar-brand.desktop {
+    display: none;
+  }
 }
 @media (max-width: 1400px) {
 .timeline-line {
@@ -1154,10 +1157,13 @@ div#about h4 {
   .carousel-inner.mobile {
     display: none;
   }
-  .navbar-brand {
+  a.navbar-brand.mobile {
+    display: none;
+}
+  /* .navbar-brand {
     position: absolute;
     left: 50%;
-  }
+  } */
       .navbar-expand-lg .navbar-collapse {
         display: flex !important;
         flex-basis: auto;

@@ -21,12 +21,12 @@ const Header: React.FC = () => {
 
     return (
         <header>
-
+         
             <nav className="navbar navbar-expand-lg navbar-custom">
-                <div className="container justify-content-between">
-                    <a className="navbar-brand" onClick={() => scrollToSection('home')}>
+                <div className="container justify-content-between">  
+                       <a className="navbar-brand mobile" onClick={() => scrollToSection('home')}>
                         <Image className="logo" src="/images/log.png" alt="Eric Analytics Logo" width={100} height={50} />
-                    </a>
+                    </a>                  
                     <button
                         className="navbar-toggler d-lg-none"
                         type="button"
@@ -51,6 +51,9 @@ const Header: React.FC = () => {
                                 <a className="nav-link text-white" onClick={() => { scrollToSection('projects'); handleNavClick(); }}>Showcase</a>
                             </li>
                         </ul>
+                        <a className="navbar-brand desktop" onClick={() => scrollToSection('home')}>
+                        <Image className="logo" src="/images/log.png" alt="Eric Analytics Logo" width={100} height={50} />
+                    </a>
                         <ul className="navbar-nav mb-2 mb-lg-0">
                             <li className="nav-item">
                                 <a className="nav-link text-white" onClick={() => { scrollToSection('reviewCarousel'); handleNavClick(); }}>Testimonial</a>

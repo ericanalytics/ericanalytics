@@ -11,7 +11,7 @@ const FAQ: React.FC = () => {
                     <h2>Frequently Asked Questions</h2>
                 </div>
                 <div className="row justify-content-center">
-                    <div className="col-lg-8">
+                    <div className="col-lg-10">
                         <Accordion defaultActiveKey="0">
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>Why Choose Eric Analytics as Your Web Analytics Consultant?</Accordion.Header>

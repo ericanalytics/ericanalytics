@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 body {
   background: #000;
   overflow-x: hidden;
@@ -96,12 +97,39 @@ section.sec_2{
     }
 .carousel-indicators [data-bs-target]{
 display: none;
-
+}
+.faq-section button.accordion-button {
+    background-color: #fff;
+    box-shadow: unset;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 23px !important;
 }
 .fter-bg-image {
   position: absolute;
   margin-top: -675px;
   right: 0;
+}
+section#faq {
+    padding-top: 140px;
+}
+.faq-section .upr_cnt12 h2 {
+    margin-bottom: 50px;
+}
+.accordion-item .accordion-body {
+    font-size: 15px;
+    width: 82%;
+    font-family: poppins;
+    font-weight: 400;
+    padding-top: 2px;
+}
+.accordion .accordion-item
+ {
+    border: unset;
+    margin-bottom: 30px;
+    border-radius: 23px !important;
+    padding: 8px;
 }
     /* Responsive Styles */
     @media (max-width: 768px) {
@@ -1058,10 +1086,22 @@ background-color: revert;
   .line {
     display: none; /* Hide the divider line on mobile for simplicity */
   }
+  section#faq {
+    padding-top: 65px;
+}
+.accordion-item .accordion-body {
+    width: 100%;
+}
   .contact-section.row{
       padding: 30px 15px 20px;
-      margin: 120px auto 40px;
+      margin: 60px auto 40px;
   }
+  .accordion .accordion-item {
+    margin-bottom: 15px;
+}
+  .faq-section .upr_cnt12 h2 {
+    margin-bottom: 30px;
+}
   .contact-info h3 {
     font-size: 36px;
     line-height: 50px;

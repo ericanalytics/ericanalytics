@@ -59,7 +59,7 @@ const Header: React.FC = () => {
                                 <a className="nav-link text-white" onClick={() => { scrollToSection('reviewCarousel'); handleNavClick(); }}>Testimonial</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link text-white" onClick={() => { scrollToSection('faq'); handleNavClick(); }}>Faq</a>
+                                <a className="nav-link text-white" onClick={() => { scrollToSection('faq'); handleNavClick(); }}>FAQ</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link text-white" onClick={() => { scrollToSection('contact'); handleNavClick(); }}>Contact</a>

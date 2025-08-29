@@ -23,6 +23,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
                     <a className="nav-link" onClick={() => scrollToSection('services')}>Services</a>
                     <a className="nav-link" onClick={() => scrollToSection('projects')}>Showcase</a>
                     <a className="nav-link" onClick={() => scrollToSection('reviewCarousel')}>Testimonial</a>
+                    <a className="nav-link" onClick={() => scrollToSection('faq')}>Faq</a>
                     <a className="nav-link" onClick={() => scrollToSection('contact')}>Contact</a>
                 </div>
 

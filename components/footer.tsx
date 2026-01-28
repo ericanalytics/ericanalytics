@@ -45,7 +45,7 @@ const Footer: React.FC<FooterProps> = ({ scrollToSection }) => {
 
             {/* Copyright Section */}
             <div className="footer-copyright">
-                Copyright © 2025. All rights reserved
+                Copyright © 2026. All rights reserved
             </div>
         </footer>
     );

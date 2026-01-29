@@ -40,6 +40,25 @@ export default function RootLayout({
     }}
   />
 
+    {/* Person Schema */}
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Eric Case",
+        url: "https://ericanalytics.net/",
+        image: "https://imagefa.st/image/eric.7FAV",
+        jobTitle: "Leading Data & Web Analytics Services",
+        worksFor: {
+          "@type": "Organization",
+          name: "Eric Analytics",
+        },
+      }),
+    }}
+  />
+
   {/* FAQ Schema */}
   <script
     type="application/ld+json"
@@ -120,7 +139,13 @@ export default function RootLayout({
       }),
     }}
   />
-
+  <meta property="og:title" content="Eric Analytics – Data & Web Analytics Services" />
+<meta property="og:description" content="Google Analytics, Tag Manager, Looker Studio, and Conversion Optimization Services." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ericanalytics.net/" />
+<meta property="og:image" content="https://ericanalytics.net/images/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />  
   <link rel="icon" href="/favicon.png" sizes="16x16" />
 </head>
 

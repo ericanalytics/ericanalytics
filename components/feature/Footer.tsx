@@ -17,7 +17,7 @@ export default function Footer() {
   return (
     <footer id="contact" className="bg-black relative">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-8">
         <div className="mb-14">
           <img
             src="/images/eric-analytics/logo.png"
@@ -63,28 +63,36 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-7 text-xs uppercase tracking-[0.2em]">
               Contact
             </h4>
-            <ul className="space-y-4 mb-8">
-              <li>
-                <a
-                  href="mailto:info@ericanalytics.net"
-                  className="group flex items-center gap-3 text-white text-sm hover:text-white transition-colors duration-200"
-                >
-                  <div className="w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.06] flex items-center justify-center flex-shrink-0 group-hover:bg-white/[0.08] group-hover:border-white/[0.12] transition-all duration-300">
-                    <i className="ri-mail-line text-sm" />
-                  </div>
-                  info@ericanalytics.net
-                </a>
-              </li>
-            </ul>
-            <div className="flex gap-2.5">
-              <a
-                href="#"
-                aria-label="YouTube"
-                className="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-white hover:text-white hover:bg-white/[0.1] hover:border-white/[0.15] transition-all duration-300 cursor-pointer"
-              >
-                <i className="ri-youtube-fill" />
-              </a>
-            </div>
+           <ul className="space-y-4 mb-8">
+  <li>
+    <a
+      href="mailto:info@ericanalytics.net"
+      className="group flex items-center gap-3 text-white text-sm hover:text-white transition-colors duration-200"
+    >
+      <div className="w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.06] flex items-center justify-center flex-shrink-0 group-hover:bg-white/[0.08] group-hover:border-white/[0.12] transition-all duration-300">
+        <i className="ri-mail-line text-sm" />
+      </div>
+      info@ericanalytics.net
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="https://www.youtube.com/@eric_case"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="YouTube"
+      className="group flex items-center gap-3 text-white text-sm hover:text-white transition-colors duration-200"
+    >
+      <div className="w-8 h-8 rounded-lg bg-white/[0.03] border border-white/[0.06] flex items-center justify-center flex-shrink-0 group-hover:bg-white/[0.08] group-hover:border-white/[0.12] transition-all duration-300">
+        <i className="ri-youtube-fill text-sm" />
+      </div>
+
+      <span>YouTube</span>
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
 

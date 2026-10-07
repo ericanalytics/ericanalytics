@@ -47,7 +47,7 @@ const industries = [
 
 export default function IndustriesSection() {
   return (
-    <section id="industries" className="py-32 bg-[#080808] relative overflow-hidden">
+    <section id="industries" className="md:py-32 py-16 bg-[#080808] relative overflow-hidden">
       {/* Ambient Glow */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-purple-500/3 rounded-full blur-[200px]" />
       <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-blue-500/4 rounded-full blur-[150px]" />

@@ -2,16 +2,16 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Leading Data & Web Analytics Services | Eric Analytics',
+  title: 'Web Analytics Consulting & Conversion Tracking Services',
   description:
-    'Google Analytics, Tag Manager, Looker Studio, and Conversion Optimization Services.',
+    'Expert web analytics consulting services, including Google Analytics, Google Ads, Google Tag Manager, Meta Ads, and web and server-side conversion tracking.',
   icons: {
     icon: '/images/eric-analytics/favicon.ico',
   },
   openGraph: {
-    title: 'Leading Data & Web Analytics Services | Eric Analytics',
+    title: 'Web Analytics Consulting & Conversion Tracking Services',
     description:
-      'Google Analytics, Tag Manager, Looker Studio, and Conversion Optimization Services.',
+      'Expert web analytics consulting services, including Google Analytics, Google Ads, Google Tag Manager, Meta Ads, and web and server-side conversion tracking.',
     type: 'website',
     url: 'https://ericanalytics.net/',
     images: ['https://ericanalytics.net/images/eric-analytics/og-image.png'],

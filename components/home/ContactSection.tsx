@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const serviceOptions = [
   'GA4 Setup & Audit',
@@ -20,13 +21,10 @@ export default function ContactSection() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus('submitting');
-    setFormError('');
-
     const form = e.currentTarget;
-    const formData = new FormData(form);
 
-    const honeypot = (formData.get('company_alt') as string)?.trim();
+    // Honeypot: bots fill this field, humans never see it
+    const honeypot = (new FormData(form).get('company_alt') as string)?.trim();
     if (honeypot) {
       setStatus('success');
       form.reset();
@@ -34,36 +32,24 @@ export default function ContactSection() {
       return;
     }
 
-    formData.delete('company_alt');
+    setStatus('submitting');
+    setFormError('');
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        body: formData,
-      });
-
-      const responseText = await response.text();
-      let parsed;
-      try {
-        parsed = JSON.parse(responseText);
-      } catch {
-        parsed = null;
-      }
-
-      const serverMsg = parsed?.meta?.message || parsed?.message || parsed?.meta?.detail || responseText;
-
-      if (!response.ok || parsed?.code !== 'OK' || (serverMsg && /spam/i.test(serverMsg))) {
-        setFormError(serverMsg || 'Something went wrong. Please try again.');
-        setStatus('error');
-        return;
-      }
+      await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        form,
+        { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY! }
+      );
 
       setStatus('success');
       form.reset();
       setCharCount(0);
       setTimeout(() => setStatus('idle'), 4000);
-    } catch {
-      setFormError('Network error. Please check your connection and try again.');
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      setFormError('Something went wrong. Please try again later.');
       setStatus('error');
     }
   };
@@ -73,7 +59,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative py-40 bg-black overflow-hidden">
+    <section id="contact" className="relative md:py-40 py-20 bg-black overflow-hidden">
       {/* Background Glows */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1100px] h-[900px] bg-gradient-to-b from-blue-500/[0.07] via-blue-600/[0.03] to-transparent rounded-full blur-[200px]" />
@@ -211,6 +197,7 @@ export default function ContactSection() {
                     id="service"
                     name="service"
                     defaultValue=""
+                    required
                     className="w-full bg-white/[0.04] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-sm outline-none transition-all duration-300 focus:border-[#60ccf1]/50 appearance-none cursor-pointer"
                   >
                     <option value="" disabled className="text-[#111111]">
@@ -237,9 +224,7 @@ export default function ContactSection() {
                   >
                     Message
                   </label>
-                  <span className={`text-xs ${charCount > 500 ? 'text-red-400' : 'text-white/25'}`}>
-                    {charCount}/500
-                  </span>
+                  <span className="text-xs text-white/25">{charCount}/500</span>
                 </div>
                 <textarea
                   id="message"
@@ -247,20 +232,29 @@ export default function ContactSection() {
                   placeholder="Tell us about your tracking challenges..."
                   rows={4}
                   maxLength={500}
+                  required
                   onChange={handleMessageChange}
                   className="w-full bg-white/[0.04] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/20 outline-none transition-all duration-300 focus:border-[#60ccf1]/50 focus:bg-white/[0.06] focus:shadow-[0_0_20px_rgba(96,204,241,0.06)] resize-none"
                 />
               </div>
 
-              {/* Honeypot */}
-              <div className="hp-field">
+              {/* Honeypot (hidden from humans, bots fill it) */}
+              <div
+                className="hp-field"
+                style={{
+                  position: 'absolute',
+                  left: '-9999px',
+                  width: 0,
+                  height: 0,
+                  overflow: 'hidden',
+                }}
+                aria-hidden="true"
+              >
                 <input
                   type="text"
                   name="company_alt"
                   tabIndex={-1}
                   autoComplete="off"
-                  aria-hidden="true"
-                  readOnly
                 />
               </div>
 

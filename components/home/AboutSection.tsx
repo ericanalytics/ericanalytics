@@ -67,7 +67,7 @@ const aboutStats = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-32 bg-[#080808] relative overflow-hidden">
+    <section id="about" className="md:py-32 py-16 bg-[#080808] relative overflow-hidden">
       {/* Ambient Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-blue-500/3 rounded-full blur-[200px]" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent" />
@@ -103,7 +103,7 @@ export default function AboutSection() {
               </div>
 
               {/* Top Rated Plus Badge */}
-              <div className="absolute -top-6 -left-6 bg-[#111] border border-white/[0.1] rounded-2xl p-4 shadow-2xl backdrop-blur-xl">
+              <div className="absolute -top-6 -left-3 md:-top-6 md:-left-6 bg-[#111] border border-white/[0.1] rounded-2xl p-4 shadow-2xl backdrop-blur-xl">
                 <div className="flex items-center gap-2">
                   <i className="ri-star-fill text-amber-400" />
                   <span className="text-white text-sm font-semibold">Top Rated Plus</span>
@@ -111,7 +111,7 @@ export default function AboutSection() {
               </div>
 
               {/* 10+ Years Badge */}
-              <div className="absolute -bottom-6 -right-6 bg-[#111] border border-white/[0.1] rounded-2xl p-5 shadow-2xl backdrop-blur-xl">
+              <div className="absolute -bottom-8 -right-3 md:-bottom-6 md:-right-6 bg-[#111] border border-white/[0.1] rounded-2xl p-5 shadow-2xl backdrop-blur-xl">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
                     <i className="ri-verified-badge-fill text-emerald-400" />

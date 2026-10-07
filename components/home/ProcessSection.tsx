@@ -28,7 +28,7 @@ const processSteps = [
 
 export default function ProcessSection() {
   return (
-    <section id="process" className="py-24 bg-black relative overflow-hidden">
+    <section id="process" className="md:py-24 py-16 bg-black relative overflow-hidden">
       <div className="relative z-10 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">

@@ -25,7 +25,7 @@ export default function TrustSection() {
   const duplicatedLogos = [...partnerLogos, ...partnerLogos];
 
   return (
-    <section className="py-28 bg-[#080808] relative overflow-hidden">
+    <section className="md:py-28 py-16 bg-[#080808] relative overflow-hidden">
       {/* Section Divider Lines */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />

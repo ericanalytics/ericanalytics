@@ -23,7 +23,7 @@ const checklistItems = [
 
 export default function ProblemSection() {
   return (
-    <section id="problems" className="py-32 bg-black relative overflow-hidden">
+    <section id="problems" className="md:py-32 py-16 bg-black relative overflow-hidden">
       {/* Ambient Glow */}
       <div className="absolute top-1/4 left-0 w-[600px] h-[600px] bg-blue-500/[0.04] rounded-full blur-[200px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#3372f1]/[0.03] rounded-full blur-[180px] pointer-events-none" />

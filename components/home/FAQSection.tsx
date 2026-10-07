@@ -11,7 +11,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-32 bg-[#0f0f0f] relative overflow-hidden">
+    <section id="faq" className="md:py-32 py-16 bg-[#0f0f0f] relative overflow-hidden">
       {/* Ambient Glow */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/4 rounded-full blur-[180px]" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent" />

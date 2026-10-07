@@ -72,7 +72,7 @@ export default function SolutionSection() {
   }, [nextSlide]);
 
   return (
-    <section id="solutions" className="py-32 bg-black relative overflow-hidden">
+    <section id="solutions" className="md:py-32 py-16 bg-black relative overflow-hidden">
       {/* Ambient Glow */}
       <div className="absolute top-1/4 left-0 w-[700px] h-[700px] bg-blue-500/[0.03] rounded-full blur-[200px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-0 w-[600px] h-[600px] bg-[#3372f1]/[0.03] rounded-full blur-[180px] pointer-events-none" />
@@ -109,14 +109,14 @@ export default function SolutionSection() {
             <div className="absolute -inset-2 bg-gradient-to-r from-[#60ccf1]/10 via-[#3372f1]/8 to-[#60ccf1]/10 rounded-[40px] blur-[50px] group-hover/viz:blur-[60px] transition-all duration-700" />
 
             <div className="relative bg-black rounded-[32px] border border-white/[0.06] overflow-hidden shadow-2xl shadow-black/60">
-              <div className="relative h-[600px] overflow-hidden">
+              <div className="relative md:h-[600px] h-[300px] overflow-hidden">
                 {/* Images */}
                 {carouselImages.map((img, idx) => (
                   <img
                     key={idx}
                     src={img.src}
                     alt={img.alt}
-                    className={`absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-700 ease-in-out ${
+                    className={`absolute inset-0 w-full h-full object-contain object-center md:object-cover md:object-top transition-opacity duration-700 ease-in-out ${
                       idx === activeSlide ? 'opacity-100' : 'opacity-0'
                     }`}
                     loading="lazy"
@@ -137,7 +137,7 @@ export default function SolutionSection() {
                 </div>
 
                 {/* Bottom Left Status Badge */}
-                <div className="absolute bottom-5 left-5 flex items-center gap-2 bg-black/40 backdrop-blur-md border border-white/[0.08] rounded-full px-4 py-2">
+                <div className="absolute bottom-6 left-2 md:bottom-5 md:left-5 flex items-center gap-2 bg-black/40 backdrop-blur-md border border-white/[0.08] rounded-full px-4 py-2">
                   <div className="w-2 h-2 rounded-full bg-[#60ccf1] shadow-[0_0_6px_rgba(96,204,241,0.6)] animate-pulse" />
                   <span className="text-xs font-medium text-white/90 transition-all duration-400">
                     {carouselImages[activeSlide].label}
@@ -145,14 +145,14 @@ export default function SolutionSection() {
                 </div>
 
                 {/* Top Right Icon */}
-                <div className="absolute top-8 right-8 w-24 h-24 rounded-full border border-[#60ccf1]/10 bg-[#60ccf1]/[0.02] backdrop-blur-sm flex items-center justify-center">
+                <div className="absolute top-3 right-3 md:top-8 md:right-8 w-14 h-14 md:w-24 md:h-24 rounded-full border border-[#60ccf1]/10 bg-[#60ccf1]/[0.02] backdrop-blur-sm flex items-center justify-center">
                   <div className="w-12 h-12 rounded-full border border-[#60ccf1]/20 bg-[#60ccf1]/[0.04] flex items-center justify-center">
                     <i className="ri-database-2-line text-[#60ccf1] text-lg" />
                   </div>
                 </div>
 
                 {/* Bottom Right Info Badge */}
-                <div className="absolute bottom-8 right-8 hidden lg:block">
+                <div className="absolute bottom-3 right-3 md:bottom-8 md:right-8 hidden lg:block">
                   <div className="flex items-center gap-1.5 bg-black/40 backdrop-blur-md border border-white/[0.08] rounded-full px-3 py-1.5 transition-all duration-400">
                     <i className="ri-shield-check-line text-[#60ccf1] text-xs" />
                     <span className="text-[10px] font-medium text-white/80">Multi-channel attribution & reporting</span>
@@ -160,7 +160,7 @@ export default function SolutionSection() {
                 </div>
 
                 {/* Pagination Dots */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10">
+                <div className="absolute bottom-2 md:bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 z-10">
                   {carouselImages.map((_, idx) => (
                     <button
                       key={idx}

@@ -48,7 +48,7 @@ const impactCards = [
 
 export default function ImpactSection() {
   return (
-    <section id="results" className="py-32 bg-black relative overflow-hidden">
+    <section id="results" className="md:py-32 py-16 bg-black relative overflow-hidden">
       {/* Ambient Glow */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-500/[0.02] rounded-full blur-[220px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#60ccf1]/[0.02] rounded-full blur-[180px] pointer-events-none" />

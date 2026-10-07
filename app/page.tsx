@@ -14,9 +14,19 @@ import AboutSection from '@/components/home/AboutSection';
 import FAQSection from '@/components/home/FAQSection';
 import ContactSection from '@/components/home/ContactSection';
 
+// ✅ NEW: schema imports
+import JsonLd from '@/components/JsonLd';
+import { organization, website, person, faq } from '@/lib/schema';
+
 export default function Home() {
   return (
     <>
+      {/* ✅ NEW: JSON-LD schemas */}
+      <JsonLd data={organization} />
+      <JsonLd data={website} />
+      <JsonLd data={person} />
+      <JsonLd data={faq} />
+
       <Header />
       <main>
         <HeroSection />

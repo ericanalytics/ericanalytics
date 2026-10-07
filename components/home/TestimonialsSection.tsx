@@ -25,7 +25,7 @@ export default function TestimonialsSection() {
   const testimonial = testimonials[currentPage];
 
   return (
-    <section id="testimonials" className="py-32 bg-black relative overflow-hidden">
+    <section id="testimonials" className="md:py-32 py-16 bg-black relative overflow-hidden">
       {/* Ambient Glow */}
       <div className="absolute top-0 right-0 w-[900px] h-[900px] bg-purple-500/3 rounded-full blur-[200px]" />
       <div className="absolute bottom-0 left-1/4 w-[700px] h-[700px] bg-blue-500/4 rounded-full blur-[150px]" />

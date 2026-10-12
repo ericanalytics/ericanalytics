@@ -39,9 +39,9 @@ export default function Footer() {
 
           {/* Middle Column - Company Nav */}
           <div className="lg:col-span-3">
-            <h4 className="text-white font-semibold mb-7 text-xs uppercase tracking-[0.2em]">
+            <p className="text-white font-semibold mb-7 text-xs uppercase tracking-[0.2em]">
               Company
-            </h4>
+            </p>
             <ul className="space-y-4">
               {footerNav.map((item) => (
                 <li key={item.label}>
@@ -60,9 +60,9 @@ export default function Footer() {
 
           {/* Right Column - Contact */}
           <div className="lg:col-span-4">
-            <h4 className="text-white font-semibold mb-7 text-xs uppercase tracking-[0.2em]">
+            <p className="text-white font-semibold mb-7 text-xs uppercase tracking-[0.2em]">
               Contact
-            </h4>
+            </p>
            <ul className="space-y-4 mb-8">
   <li>
     <a

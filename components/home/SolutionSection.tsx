@@ -72,7 +72,7 @@ export default function SolutionSection() {
   }, [nextSlide]);
 
   return (
-    <section id="solutions" className="md:py-32 py-16 bg-black relative overflow-hidden">
+    <section id="solutions" className="md:py-28 py-16 bg-black relative overflow-hidden">
       {/* Ambient Glow */}
       <div className="absolute top-1/4 left-0 w-[700px] h-[700px] bg-blue-500/[0.03] rounded-full blur-[200px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-0 w-[600px] h-[600px] bg-[#3372f1]/[0.03] rounded-full blur-[180px] pointer-events-none" />
@@ -208,9 +208,9 @@ export default function SolutionSection() {
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#60ccf1]/12 to-[#3372f1]/12 border border-[#60ccf1]/15 flex items-center justify-center group-hover:scale-110 group-hover:border-[#60ccf1]/30 group-hover:shadow-[0_0_20px_rgba(96,204,241,0.15)] transition-all duration-300">
                   <i className={`${feature.icon} text-[#60ccf1] text-lg`} />
                 </div>
-                <span className="text-white text-sm font-medium leading-snug">
+                <h3 className="text-white text-sm font-medium leading-snug">
                   {feature.title}
-                </span>
+                </h3>
               </div>
             </div>
           ))}

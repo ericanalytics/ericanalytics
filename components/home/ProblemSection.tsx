@@ -23,7 +23,7 @@ const checklistItems = [
 
 export default function ProblemSection() {
   return (
-    <section id="problems" className="md:py-32 py-16 bg-black relative overflow-hidden">
+    <section id="problems" className="md:py-28 py-16 bg-black relative overflow-hidden">
       {/* Ambient Glow */}
       <div className="absolute top-1/4 left-0 w-[600px] h-[600px] bg-blue-500/[0.04] rounded-full blur-[200px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#3372f1]/[0.03] rounded-full blur-[180px] pointer-events-none" />
@@ -52,9 +52,9 @@ export default function ProblemSection() {
               </div>
             </div>
 
-            <h3 className="text-base font-semibold text-white mb-5">
+            <p className="text-base font-semibold text-white mb-5">
               At Eric Analytics, we regularly audit accounts where:
-            </h3>
+            </p>
 
             <div className="space-y-3.5 mb-12">
               {checklistItems.map((item) => (
@@ -65,9 +65,9 @@ export default function ProblemSection() {
                   <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#60ccf1]/15 to-[#3372f1]/15 border border-[#60ccf1]/20 flex items-center justify-center shrink-0 transition-all duration-300 group-hover:border-[#60ccf1]/35 group-hover:from-[#60ccf1]/25 group-hover:to-[#3372f1]/25">
                     <i className={`${item.icon} text-white transition-transform duration-300 group-hover:scale-110`} />
                   </div>
-                  <span className="text-sm font-medium leading-snug text-white transition-all duration-300 group-hover:text-white group-hover:translate-x-1">
+                  <h3 className="text-sm font-medium leading-snug text-white transition-all duration-300 group-hover:text-white group-hover:translate-x-1">
                     {item.text}
-                  </span>
+                  </h3>
                 </div>
               ))}
             </div>

@@ -67,7 +67,7 @@ const aboutStats = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="md:py-32 py-16 bg-[#080808] relative overflow-hidden">
+    <section id="about" className="md:py-28 py-16 bg-[#080808] relative overflow-hidden">
       {/* Ambient Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[500px] bg-blue-500/3 rounded-full blur-[200px]" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent" />

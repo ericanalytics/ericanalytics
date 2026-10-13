@@ -116,7 +116,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative md:py-40 py-20 bg-black overflow-hidden"
+      className="relative md:py-28 py-20 bg-black overflow-hidden"
     >
       {/* =====================================================
           BACKGROUND GLOWS

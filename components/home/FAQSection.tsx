@@ -11,7 +11,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faq" className="md:py-32 py-16 bg-[#0f0f0f] relative overflow-hidden">
+    <section id="faq" className="md:py-28 py-16 bg-[#0f0f0f] relative overflow-hidden">
       {/* Ambient Glow */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/4 rounded-full blur-[180px]" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.04] to-transparent" />
@@ -48,9 +48,9 @@ export default function FAQSection() {
                   onClick={() => toggle(index)}
                   className="w-full flex items-center justify-between p-6 text-left cursor-pointer group"
                 >
-                  <span className="text-white font-medium text-base pr-4 group-hover:text-white/90 transition-colors">
+                  <h3 className="text-white font-medium text-base pr-4 group-hover:text-white/90 transition-colors">
                     {faq.question}
-                  </span>
+                  </h3>
                   <div
                     className={`w-7 h-7 rounded-full border flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
                       isOpen

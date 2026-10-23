@@ -91,7 +91,7 @@ export default function ContactSection() {
       // Return button to normal after 4 seconds
       setTimeout(() => {
         setStatus('idle');
-      }, 4000);
+      }, 8000);
     } catch (err) {
       console.error('EmailJS error:', err);
 
@@ -225,7 +225,7 @@ export default function ContactSection() {
                     id="firstName"
                     type="text"
                     name="firstName"
-                    placeholder="John"
+                    placeholder="First Name"
                     required
                     className="w-full bg-white/[0.04] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/20 outline-none transition-all duration-300 focus:border-[#60ccf1]/50 focus:bg-white/[0.06] focus:shadow-[0_0_20px_rgba(96,204,241,0.06)]"
                   />
@@ -243,7 +243,7 @@ export default function ContactSection() {
                     id="lastName"
                     type="text"
                     name="lastName"
-                    placeholder="Doe"
+                    placeholder="Last Name"
                     required
                     className="w-full bg-white/[0.04] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/20 outline-none transition-all duration-300 focus:border-[#60ccf1]/50 focus:bg-white/[0.06] focus:shadow-[0_0_20px_rgba(96,204,241,0.06)]"
                   />
@@ -267,7 +267,7 @@ export default function ContactSection() {
                   id="email"
                   type="email"
                   name="email"
-                  placeholder="john@company.com"
+                  placeholder="Email Address"
                   required
                   className="w-full bg-white/[0.04] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/20 outline-none transition-all duration-300 focus:border-[#60ccf1]/50 focus:bg-white/[0.06] focus:shadow-[0_0_20px_rgba(96,204,241,0.06)]"
                 />
@@ -289,7 +289,7 @@ export default function ContactSection() {
                   id="subject"
                   type="text"
                   name="subject"
-                  placeholder="Tracking Audit Request"
+                  placeholder="Need help fixing conversion data"
                   className="w-full bg-white/[0.04] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/20 outline-none transition-all duration-300 focus:border-[#60ccf1]/50 focus:bg-white/[0.06] focus:shadow-[0_0_20px_rgba(96,204,241,0.06)]"
                 />
               </div>

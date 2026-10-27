@@ -87,28 +87,28 @@ export default function AboutSection() {
         </div>
 
         {/* Two Column Layout */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mt-20">
+        <div className="grid lg:grid-cols-2 gap-16 items-stretch mt-20">
           {/* Left - Image */}
-          <div>
-            <div className="relative">
+          <div className="h-full">
+            <div className="relative h-full">
               <div className="absolute -inset-2 bg-blue-500/5 rounded-[40px] blur-[60px]" />
-              <div className="relative bg-[#111] rounded-3xl border border-white/[0.06] overflow-hidden shadow-2xl">
-                {/* <img
-                  src="/images/eric-analytics/Ideal_Partner.png"
+              <div className="relative h-full bg-[#111] rounded-3xl border border-white/[0.06] overflow-hidden shadow-2xl">
+                <img
+                  src="/images/eric-analytics/eric_case.jpg"
                   alt="Eric Case - Eric Analytics"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto lg:absolute lg:inset-0 lg:h-full object-cover object-center"
                   loading="lazy"
-                /> */}
-                <YouTubeVideo />
+                />
+                {/* <YouTubeVideo /> */}
               </div>
 
               {/* Top Rated Plus Badge */}
-              <div className="absolute -top-6 -left-3 md:-top-6 md:-left-6 bg-[#111] border border-white/[0.1] rounded-2xl p-4 shadow-2xl backdrop-blur-xl">
+              {/* <div className="absolute -top-6 -left-3 md:-top-6 md:-left-6 bg-[#111] border border-white/[0.1] rounded-2xl p-4 shadow-2xl backdrop-blur-xl">
                 <div className="flex items-center gap-2">
                   <i className="ri-star-fill text-amber-400" />
-                  <span className="text-white text-sm font-semibold">Top Rated Plus</span>
+                  <span className="text-white text-sm font-semibold">Eric Case</span>
                 </div>
-              </div>
+              </div> */}
 
               {/* 10+ Years Badge */}
               <div className="absolute -bottom-8 -right-3 md:-bottom-6 md:-right-6 bg-[#111] border border-white/[0.1] rounded-2xl p-5 shadow-2xl backdrop-blur-xl">

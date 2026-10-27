@@ -103,12 +103,12 @@ export default function AboutSection() {
               </div>
 
               {/* Top Rated Plus Badge */}
-              {/* <div className="absolute -top-6 -left-3 md:-top-6 md:-left-6 bg-[#111] border border-white/[0.1] rounded-2xl p-4 shadow-2xl backdrop-blur-xl">
+              <div className="absolute -top-6 -left-3 md:-top-6 md:-left-6 bg-[#111] border border-white/[0.1] rounded-2xl p-4 shadow-2xl backdrop-blur-xl">
                 <div className="flex items-center gap-2">
                   <i className="ri-star-fill text-amber-400" />
                   <span className="text-white text-sm font-semibold">Eric Case</span>
                 </div>
-              </div> */}
+              </div>
 
               {/* 10+ Years Badge */}
               <div className="absolute -bottom-8 -right-3 md:-bottom-6 md:-right-6 bg-[#111] border border-white/[0.1] rounded-2xl p-5 shadow-2xl backdrop-blur-xl">

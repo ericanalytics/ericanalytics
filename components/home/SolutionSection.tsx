@@ -230,7 +230,12 @@ export default function SolutionSection() {
                 </p>
               </div>
               <a
-                href="#contact"
+                href="#contact" onClick={(e) => {
+    e.preventDefault();
+    document
+      .getElementById('contact')
+      ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }}
                 className="group/btn inline-flex items-center gap-2.5 bg-white text-[#080808] px-6 py-3 rounded-xl text-sm font-semibold whitespace-nowrap transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(255,255,255,0.12)] active:scale-[0.98]"
               >
                 Start Your Audit

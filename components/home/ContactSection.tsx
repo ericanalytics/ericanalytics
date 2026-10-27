@@ -91,7 +91,7 @@ export default function ContactSection() {
       // Return button to normal after 4 seconds
       setTimeout(() => {
         setStatus('idle');
-      }, 8000);
+      }, 11000);
     } catch (err) {
       console.error('EmailJS error:', err);
 

@@ -1,3 +1,4 @@
+'use client';
 export default function HeroSection() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-[#000000]">
@@ -35,7 +36,12 @@ export default function HeroSection() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#contact"
+                href="#contact" onClick={(e) => {
+    e.preventDefault();
+    document
+      .getElementById('contact')
+      ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }}
                 className="group inline-flex items-center justify-center gap-3 bg-white text-[#080808] px-9 py-4 rounded-xl font-semibold whitespace-nowrap transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_12px_48px_rgba(255,255,255,0.15)] active:scale-[0.98]"
               >
                 Fix Your Tracking Setup

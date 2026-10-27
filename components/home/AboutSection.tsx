@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 import Image from 'next/image';
 import YouTubeVideo from '../youtube-video';
@@ -152,7 +153,12 @@ export default function AboutSection() {
 
             {/* CTA Button */}
             <a
-              href="#contact"
+              href="#contact" onClick={(e) => {
+    e.preventDefault();
+    document
+      .getElementById('contact')
+      ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }}
               className="inline-flex items-center gap-2 bg-white/[0.04] border border-white/[0.1] text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/[0.08] hover:border-white/[0.18] transition-all duration-300 cursor-pointer whitespace-nowrap"
             >
               Let&apos;s Connect

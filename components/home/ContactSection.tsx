@@ -24,6 +24,9 @@ export default function ContactSection() {
   const [charCount, setCharCount] = useState(0);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
+  // Captcha tabhi dikhega jab user form me kisi field pe click kare
+  const [showCaptcha, setShowCaptcha] = useState(false);
+
   const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleSubmit = async (
@@ -67,15 +70,46 @@ export default function ContactSection() {
     setFormError('');
 
     try {
-      await emailjs.sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        form,
-        {
-          publicKey:
-            process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
-        }
-      );
+      // ------------------------------------------------
+      // 1. Save to Supabase (+ server-side reCAPTCHA check)
+      // ------------------------------------------------
+      const fd = new FormData(form);
+
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName: fd.get('firstName'),
+          lastName: fd.get('lastName'),
+          email: fd.get('email'),
+          subject: fd.get('subject'),
+          service: fd.get('service'),
+          message: fd.get('message'),
+          captchaToken,
+        }),
+      });
+
+      if (!res.ok) throw new Error('Failed to save submission');
+
+      // ------------------------------------------------
+      // 2. Email notification via EmailJS
+      //    (fail ho to bhi form success dikhega, kyunki
+      //     data Supabase me already save ho chuka hai)
+      // ------------------------------------------------
+      try {
+        await emailjs.sendForm(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+          form,
+          {
+            publicKey:
+              process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+          }
+        );
+      } catch (emailErr) {
+        const ee = emailErr as { status?: number; text?: string };
+        console.error('EmailJS error:', ee.status, ee.text);
+      }
 
       // --------------------------------------------------
       // Success
@@ -91,9 +125,9 @@ export default function ContactSection() {
       // Return button to normal after 4 seconds
       setTimeout(() => {
         setStatus('idle');
-      }, 11000);
+      }, 4000);
     } catch (err) {
-      console.error('EmailJS error:', err);
+      console.error('Form submit error:', err);
 
       setFormError(
         'Something went wrong. Please try again later.'
@@ -118,59 +152,34 @@ export default function ContactSection() {
       id="contact"
       className="relative md:py-28 py-20 bg-black overflow-hidden"
     >
-      {/* =====================================================
-          BACKGROUND GLOWS
-      ====================================================== */}
-
+      {/* BACKGROUND GLOWS */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1100px] h-[900px] bg-gradient-to-b from-blue-500/[0.07] via-blue-600/[0.03] to-transparent rounded-full blur-[200px]" />
-
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1400px] h-[500px] bg-gradient-to-t from-blue-600/[0.05] via-blue-500/[0.02] to-transparent rounded-full blur-[160px]" />
-
         <div className="absolute top-1/4 right-[12%] w-[600px] h-[600px] bg-indigo-500/[0.04] rounded-full blur-[180px]" />
-
         <div className="absolute bottom-1/4 left-[8%] w-[450px] h-[450px] bg-cyan-500/[0.03] rounded-full blur-[140px]" />
-
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70" />
       </div>
 
-      {/* =====================================================
-          FLOATING PARTICLES
-      ====================================================== */}
-
+      {/* FLOATING PARTICLES */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[18%] left-[5%] w-2 h-2 rounded-full bg-blue-400/25 blur-[1px] animate-pulse" />
-
         <div className="absolute top-[22%] right-[18%] w-1.5 h-1.5 rounded-full bg-cyan-400/20 blur-[1px] animate-pulse" />
-
         <div className="absolute bottom-[28%] left-[22%] w-1.5 h-1.5 rounded-full bg-blue-400/18 blur-[1px] animate-pulse" />
-
         <div className="absolute bottom-[32%] right-[12%] w-2 h-2 rounded-full bg-indigo-400/20 blur-[1px] animate-pulse" />
-
         <div className="absolute top-[45%] left-[3%] w-1 h-1 rounded-full bg-blue-300/25 blur-[1px] animate-pulse" />
-
         <div className="absolute top-[58%] right-[6%] w-1 h-1 rounded-full bg-cyan-300/20 blur-[1px] animate-pulse" />
       </div>
 
-      {/* =====================================================
-          DIVIDER LINES
-      ====================================================== */}
-
+      {/* DIVIDER LINES */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
-
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
-      {/* =====================================================
-          MAIN CONTAINER
-      ====================================================== */}
-
+      {/* MAIN CONTAINER */}
       <div className="relative z-10 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-          {/* =================================================
-              LEFT SIDE
-          ================================================== */}
-
+          {/* LEFT SIDE */}
           <div>
             <p className="text-white text-xs uppercase tracking-[0.3em] mb-8 font-medium">
               Start Today
@@ -196,23 +205,16 @@ export default function ContactSection() {
             </p>
           </div>
 
-          {/* =================================================
-              RIGHT SIDE - FORM
-          ================================================== */}
-
+          {/* RIGHT SIDE - FORM */}
           <div>
             <form
               id="contact-form"
               onSubmit={handleSubmit}
+              onFocus={() => setShowCaptcha(true)}
               className="bg-black border border-white/[0.08] rounded-2xl p-8 lg:p-10"
             >
-
-              {/* =============================================
-                  FIRST / LAST NAME
-              ============================================== */}
-
+              {/* FIRST / LAST NAME */}
               <div className="grid grid-cols-2 gap-4 mb-4">
-
                 <div>
                   <label
                     htmlFor="firstName"
@@ -248,13 +250,9 @@ export default function ContactSection() {
                     className="w-full bg-white/[0.04] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/20 outline-none transition-all duration-300 focus:border-[#60ccf1]/50 focus:bg-white/[0.06] focus:shadow-[0_0_20px_rgba(96,204,241,0.06)]"
                   />
                 </div>
-
               </div>
 
-              {/* =============================================
-                  EMAIL
-              ============================================== */}
-
+              {/* EMAIL */}
               <div className="mb-4">
                 <label
                   htmlFor="email"
@@ -273,10 +271,7 @@ export default function ContactSection() {
                 />
               </div>
 
-              {/* =============================================
-                  SUBJECT
-              ============================================== */}
-
+              {/* SUBJECT */}
               <div className="mb-4">
                 <label
                   htmlFor="subject"
@@ -294,10 +289,7 @@ export default function ContactSection() {
                 />
               </div>
 
-              {/* =============================================
-                  SERVICE
-              ============================================== */}
-
+              {/* SERVICE */}
               <div className="mb-4">
                 <label
                   htmlFor="service"
@@ -307,7 +299,6 @@ export default function ContactSection() {
                 </label>
 
                 <div className="relative">
-
                   <select
                     id="service"
                     name="service"
@@ -337,18 +328,12 @@ export default function ContactSection() {
                   <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white/60">
                     <i className="ri-arrow-down-s-line text-lg" />
                   </span>
-
                 </div>
               </div>
 
-              {/* =============================================
-                  MESSAGE
-              ============================================== */}
-
+              {/* MESSAGE */}
               <div className="mb-6">
-
                 <div className="flex items-center justify-between mb-2">
-
                   <label
                     htmlFor="message"
                     className="block text-xs uppercase tracking-[0.15em] text-white font-medium"
@@ -359,7 +344,6 @@ export default function ContactSection() {
                   <span className="text-xs text-white/25">
                     {charCount}/500
                   </span>
-
                 </div>
 
                 <textarea
@@ -372,48 +356,41 @@ export default function ContactSection() {
                   onChange={handleMessageChange}
                   className="w-full bg-white/[0.04] border border-white/[0.1] rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/20 outline-none transition-all duration-300 focus:border-[#60ccf1]/50 focus:bg-white/[0.06] focus:shadow-[0_0_20px_rgba(96,204,241,0.06)] resize-none"
                 />
-
               </div>
 
-              {/* =============================================
-                  GOOGLE reCAPTCHA V2
-              ============================================== */}
-
-              <div className="mb-6">
-
-                <ReCAPTCHA
-                  ref={recaptchaRef}
-                  sitekey={
-                    process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!
-                  }
-                  onChange={(token) => {
-                    setCaptchaToken(token);
-                    setFormError('');
-
-                    if (status === 'error') {
-                      setStatus('idle');
+              {/* GOOGLE reCAPTCHA V2 (form pe focus hone ke baad hi dikhega) */}
+              <div className={showCaptcha ? 'mb-6' : 'hidden'}>
+                {showCaptcha && (
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey={
+                      process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!
                     }
-                  }}
-                  onExpired={() => {
-                    setCaptchaToken(null);
-                  }}
-                  onErrored={() => {
-                    setCaptchaToken(null);
+                    onChange={(token) => {
+                      setCaptchaToken(token);
+                      setFormError('');
 
-                    setFormError(
-                      'reCAPTCHA could not be loaded. Please refresh the page and try again.'
-                    );
+                      if (status === 'error') {
+                        setStatus('idle');
+                      }
+                    }}
+                    onExpired={() => {
+                      setCaptchaToken(null);
+                    }}
+                    onErrored={() => {
+                      setCaptchaToken(null);
 
-                    setStatus('error');
-                  }}
-                />
+                      setFormError(
+                        'reCAPTCHA could not be loaded. Please refresh the page and try again.'
+                      );
 
+                      setStatus('error');
+                    }}
+                  />
+                )}
               </div>
 
-              {/* =============================================
-                  HONEYPOT
-              ============================================== */}
-
+              {/* HONEYPOT */}
               <div
                 className="hp-field"
                 style={{
@@ -433,16 +410,12 @@ export default function ContactSection() {
                 />
               </div>
 
-              {/* =============================================
-                  SUBMIT BUTTON
-              ============================================== */}
-
+              {/* SUBMIT BUTTON */}
               <button
                 type="submit"
                 disabled={status === 'submitting'}
                 className="w-full inline-flex items-center justify-center gap-3 bg-white text-[#080808] px-10 py-4 rounded-xl font-semibold text-base whitespace-nowrap transition-all duration-300 hover:bg-white/90 hover:scale-[1.02] hover:shadow-[0_8px_40px_rgba(255,255,255,0.12)] active:scale-[0.98] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100 cursor-pointer"
               >
-
                 {status === 'submitting' ? (
                   <>
                     <i className="ri-loader-4-line animate-spin" />
@@ -459,19 +432,14 @@ export default function ContactSection() {
                     <i className="ri-arrow-right-line" />
                   </>
                 )}
-
               </button>
 
-              {/* =============================================
-                  ERROR MESSAGE
-              ============================================== */}
-
+              {/* ERROR MESSAGE */}
               {status === 'error' && formError && (
                 <div className="mt-4 p-3 bg-red-500/20 border border-red-400/30 rounded-xl text-sm text-white">
                   {formError}
                 </div>
               )}
-
             </form>
           </div>
         </div>

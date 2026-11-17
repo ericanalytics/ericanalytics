@@ -1,64 +1,53 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { createClient } from '@supabase/supabase-js';
 
-// This route replaces the old readdy.ai form endpoint
-// (https://readdy.ai/api/form/...) that the site used to submit to.
-//
-// Right now it just validates the payload and logs it. Wire it up to
-// whatever you actually want to happen on submit, e.g.:
-//   - send an email via Resend / Nodemailer / SendGrid
-//   - save the lead to a database
-//   - forward it to a CRM (HubSpot, etc.)
-//
-// Example with Resend (npm i resend):
-//   import { Resend } from 'resend';
-//   const resend = new Resend(process.env.RESEND_API_KEY);
-//   await resend.emails.send({
-//     from: 'Website <noreply@ericanalytics.net>',
-//     to: 'info@ericanalytics.net',
-//     subject: `New inquiry: ${subject || 'Website contact form'}`,
-//     text: `${firstName} ${lastName} <${email}>\nService: ${service}\n\n${message}`,
-//   });
+const supabase = createClient(
+  process.env.SUPABASE_URL!,
+  process.env.SUPABASE_SECRET_KEY!
+);
 
 export async function POST(request: NextRequest) {
   try {
-    const formData = await request.formData();
+    const body = await request.json();
+    const { firstName, lastName, email, subject, service, message, captchaToken } = body;
 
-    const honeypot = (formData.get('company_alt') as string)?.trim();
-    if (honeypot) {
-      // Bot submission — pretend success, do nothing further.
-      return NextResponse.json({ code: 'OK' });
+    if (!firstName || !lastName || !email || !service || !message || !captchaToken) {
+      return NextResponse.json({ error: 'Missing fields' }, { status: 400 });
     }
 
-    const firstName = formData.get('firstName') as string;
-    const lastName = formData.get('lastName') as string;
-    const email = formData.get('email') as string;
-    const subject = formData.get('subject') as string;
-    const service = formData.get('service') as string;
-    const message = formData.get('message') as string;
+    // 1. reCAPTCHA server-side verify
+    const verify = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        secret: process.env.RECAPTCHA_SECRET_KEY!,
+        response: captchaToken,
+      }),
+    });
+    const verifyData = await verify.json();
 
-    if (!firstName || !lastName || !email) {
-      return NextResponse.json(
-        { code: 'ERROR', message: 'Missing required fields.' },
-        { status: 400 }
-      );
+    if (!verifyData.success) {
+      return NextResponse.json({ error: 'Captcha failed' }, { status: 400 });
     }
 
-    // TODO: send email / save to DB / forward to CRM here.
-    console.log('New contact form submission:', {
-      firstName,
-      lastName,
-      email,
-      subject,
+    // 2. Supabase me save
+    const { error } = await supabase.from('contact_submissions').insert({
+      first_name: String(firstName).trim(),
+      last_name: String(lastName).trim(),
+      email: String(email).trim(),
+      subject: subject ? String(subject).trim() : null,
       service,
-      message,
+      message: String(message).trim().slice(0, 500),
     });
 
-    return NextResponse.json({ code: 'OK' });
-  } catch (error) {
-    console.error('Contact form error:', error);
-    return NextResponse.json(
-      { code: 'ERROR', message: 'Something went wrong. Please try again.' },
-      { status: 500 }
-    );
+    if (error) {
+      console.error('Supabase error:', error);
+      return NextResponse.json({ error: 'DB error' }, { status: 500 });
+    }
+
+    return NextResponse.json({ ok: true });
+  } catch (err) {
+    console.error('Contact form error:', err);
+    return NextResponse.json({ error: 'Server error' }, { status: 500 });
   }
 }

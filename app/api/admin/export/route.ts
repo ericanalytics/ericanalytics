@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { isAdmin } from '../../../../lib/adminAuth';
-import { supabaseAdmin } from '../../../../lib/supabaseAdmin';
+import { getSupabaseAdmin } from '../../../../lib/supabaseAdmin';
+
+export const dynamic = 'force-dynamic';
 
 function csvCell(value: unknown) {
   let s = value == null ? '' : String(value);
@@ -13,7 +15,14 @@ export async function GET() {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const { data, error } = await supabaseAdmin
+  let supabase;
+  try {
+    supabase = getSupabaseAdmin();
+  } catch {
+    return NextResponse.json({ error: 'Server config missing' }, { status: 500 });
+  }
+
+  const { data, error } = await supabase
     .from('contact_submissions')
     .select('*')
     .order('created_at', { ascending: false });

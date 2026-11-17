@@ -996,7 +996,7 @@ export default function ConsolePage() {
               Delete {deleteIds.length > 1 ? `${deleteIds.length} submissions` : 'submission'}?
             </h3>
             <p className="text-sm text-white/60 mt-2">
-              Ye permanently delete ho jayega aur wapas nahi aayega.
+              This will be permanently deleted and cannot be undone.
             </p>
             <div className="flex justify-end gap-3 mt-6">
               <button

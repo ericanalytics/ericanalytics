@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { isAdmin } from '../../../../lib/adminAuth';
-import { supabaseAdmin } from '../../../../lib/supabaseAdmin';
+import { getSupabaseAdmin } from '../../../../lib/supabaseAdmin';
+
+export const dynamic = 'force-dynamic';
 
 const STATUSES = ['new', 'contacted', 'qualified', 'closed'];
 
@@ -9,7 +11,14 @@ export async function GET() {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const { data, error } = await supabaseAdmin
+  let supabase;
+  try {
+    supabase = getSupabaseAdmin();
+  } catch {
+    return NextResponse.json({ error: 'Server config missing' }, { status: 500 });
+  }
+
+  const { data, error } = await supabase
     .from('contact_submissions')
     .select('*')
     .order('created_at', { ascending: false });
@@ -24,6 +33,13 @@ export async function GET() {
 export async function PATCH(req: Request) {
   if (!(await isAdmin())) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+
+  let supabase;
+  try {
+    supabase = getSupabaseAdmin();
+  } catch {
+    return NextResponse.json({ error: 'Server config missing' }, { status: 500 });
   }
 
   const body = await req.json().catch(() => null);
@@ -53,7 +69,7 @@ export async function PATCH(req: Request) {
     return NextResponse.json({ error: 'Nothing to update' }, { status: 400 });
   }
 
-  const { error } = await supabaseAdmin
+  const { error } = await supabase
     .from('contact_submissions')
     .update(update)
     .in('id', ids);
@@ -70,6 +86,13 @@ export async function DELETE(req: Request) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
+  let supabase;
+  try {
+    supabase = getSupabaseAdmin();
+  } catch {
+    return NextResponse.json({ error: 'Server config missing' }, { status: 500 });
+  }
+
   const body = await req.json().catch(() => null);
   const ids: string[] = Array.isArray(body?.ids) ? body.ids.map(String) : [];
 
@@ -77,7 +100,7 @@ export async function DELETE(req: Request) {
     return NextResponse.json({ error: 'Missing ids' }, { status: 400 });
   }
 
-  const { error } = await supabaseAdmin
+  const { error } = await supabase
     .from('contact_submissions')
     .delete()
     .in('id', ids);
